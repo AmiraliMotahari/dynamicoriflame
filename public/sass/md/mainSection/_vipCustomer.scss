@@ -1,0 +1,97 @@
+section.vipCustomer {
+  width: 100%;
+  margin-bottom: 100px;
+  padding: 50px 30px 30px;
+  background-color: rgba(178, 175, 239, 0.2);
+  > .container {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    > .content {
+      display: flex;
+      width: 100%;
+      flex-flow: column;
+      align-self: first baseline;
+      justify-content: center;
+      align-items: center;
+      row-gap: 20px;
+      > img {
+        width: 41px;
+      }
+      >.details{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        > h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--t5);
+        text-align: center;
+        text-transform: capitalize;
+      }
+      > p {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--t5);
+        text-align: center;
+      }
+      }
+    }
+  }
+  > .vipBtn {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+    > a {
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-family: 700;
+      color: var(--tDark);
+      padding: 12px 23px;
+      border: 1px solid var(--tDark);
+      border-radius: 25px;
+      background-color: transparent;
+      position: relative;
+      transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover {
+          background-color: rgba(51, 51, 51, 0.04);
+        }
+        &:active {
+          &::after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 25px;
+            z-index: -1;
+            background-color: #aaaaaaa0;
+            animation-name: buttonFill;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+          }
+        }
+    }
+  }
+}
+@keyframes buttonFill {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

@@ -1,0 +1,34 @@
+section.infoParagraph {
+  width: 100%;
+  margin-bottom: 100px;
+  > .container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    > h2 {
+      font-size: 40px;
+      font-weight: 700;
+      font-family: sansOriBold, sansOri, sans-serif;
+      color: var(--tDark);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    > p {
+      max-width: 600px;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--tDark);
+      text-align: center;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    > .line {
+      width: 90px;
+      height: 4px;
+      background-color: rgb(128, 205, 208);
+      border-radius: 25px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+section.siteLinks {
+  width: 100%;
+  padding: 30px 15px;
+  background-color: rgb(245, 245, 245);
+  > .container {
+    display: grid;
+    max-width: 984px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(23.5%, 1fr));
+    column-gap: 2%;
+    justify-content: center;
+    align-items: start;
+    > .col {
+      display: block;
+      > h3 {
+        text-align: left;
+        font-size: 14px;
+        font-weight: bolder;
+        color: var(--tDark);
+        margin: 10px 0;
+        text-transform: uppercase;
+      }
+      > .content {
+        display: flex;
+        flex-flow: column;
+        justify-content: left;
+        align-items: start;
+        > a {
+          display: block;
+          text-decoration: none;
+          text-align: left;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 30px;
+          color: var(--tDark);
+          text-transform: capitalize;
+          &:hover{
+            color: #68BB93;
+          }
+        }
+      }
+    }
+  }
+}

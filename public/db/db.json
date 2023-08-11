@@ -1,0 +1,182 @@
+{
+  "newProducts": [
+    {
+      "id": "1",
+      "href": "#",
+      "img": {
+        "src": "./img/newProducts/newP1.jpeg",
+        "alt": "NewProductsImages"
+      },
+      "title": "love nature",
+      "paragraph": "Calming Micellar Water with Organic Goji Berry & Oat",
+      "newPrice": "4.99",
+      "oldPrice": "8.99",
+      "rating": "4.5"
+    },
+    {
+      "id": "2",
+      "href": "#",
+      "img": {
+        "src": "./img/newProducts/newP1.jpeg",
+        "alt": "NewProductsImages"
+      },
+      "title": "love nature",
+      "paragraph": "Calming Micellar Water with Organic Goji Berry & Oat",
+      "newPrice": "4.99",
+      "oldPrice": "8.99",
+      "rating": "3.5"
+    },
+    {
+      "id": "3",
+      "href": "#",
+      "img": {
+        "src": "./img/newProducts/newP1.jpeg",
+        "alt": "NewProductsImages"
+      },
+      "title": "love nature",
+      "paragraph": "Calming Micellar Water with Organic Goji Berry & Oat",
+      "newPrice": "4.99",
+      "oldPrice": "8.99",
+      "rating": "1.5"
+    }
+  ],
+  "bestOffersProducts": [
+    {
+      "id": "1",
+      "href": "#",
+      "img": {
+        "src": "./img/bestOffers/bop1.jpeg",
+        "alt": "bestOffersImages"
+      },
+      "title": "love nature",
+      "paragraph": "Calming Micellar Water with Organic Goji Berry & Oat",
+      "newPrice": "4.99",
+      "oldPrice": "8.99",
+      "rating": "4.5"
+    },
+    {
+      "id": "2",
+      "href": "#",
+      "img": {
+        "src": "./img/bestOffers/bop2.jpeg",
+        "alt": "bestOffersImages"
+      },
+      "title": "love nature",
+      "paragraph": "Calming Micellar Water with Organic Goji Berry & Oat",
+      "newPrice": "4.99",
+      "oldPrice": "8.99",
+      "rating": "3.5"
+    },
+    {
+      "id": "3",
+      "href": "#",
+      "img": {
+        "src": "./img/bestOffers/bop1.jpeg",
+        "alt": "bestOffersImages"
+      },
+      "title": "love nature",
+      "paragraph": "Calming Micellar Water with Organic Goji Berry & Oat",
+      "newPrice": "4.99",
+      "oldPrice": "8.99",
+      "rating": "1.5"
+    },
+    {
+      "id": "4",
+      "href": "#",
+      "img": {
+        "src": "./img/bestOffers/bop2.jpeg",
+        "alt": "bestOffersImages"
+      },
+      "title": "love nature",
+      "paragraph": "Calming Micellar Water with Organic Goji Berry & Oat",
+      "newPrice": "4.99",
+      "oldPrice": "8.99",
+      "rating": "3.5"
+    }
+  ],
+  "hairProducts": [
+    {
+      "id": "1",
+      "href": "#",
+      "img": {
+        "src": "./img/hairAndNail/h4.jpeg",
+        "alt": "hair product images"
+      },
+      "title": "Wellness by Oriflame",
+      "paragraph": "Hair & Nail NutriComplex",
+      "newPrice": "4.99",
+      "oldPrice": "8.99",
+      "rating": "4.5"
+    },
+    {
+      "id": "2",
+      "href": "#",
+      "img": {
+        "src": "./img/hairAndNail/h2.jpeg",
+        "alt": "hair product images"
+      },
+      "title": "Wellness by Oriflame",
+      "paragraph": "Hair & Nail NutriComplex",
+      "newPrice": "4.99",
+      "oldPrice": "8.99",
+      "rating": "3.5"
+    },
+    {
+      "id": "3",
+      "href": "#",
+      "img": {
+        "src": "./img/hairAndNail/h3.jpeg",
+        "alt": "hair product images"
+      },
+      "title": "Wellness by Oriflame",
+      "paragraph": "Hair & Nail NutriComplex",
+      "newPrice": "4.99",
+      "oldPrice": "8.99",
+      "rating": "1.5"
+    }
+  ],
+  "swiper": [
+    {
+      "id": "1",
+      "href": "#",
+      "img": {
+        "src": "./public/img/swiperImages/s1.jpeg",
+        "alt": "swiperImages"
+      },
+      "title": "new love potion ruby",
+      "paragraph": "own your sensuality",
+      "button": {
+        "href":"#",
+        "text":"shop now"
+      }
+    },
+    {
+      "id": "2",
+      "href": "#",
+      "img": {
+        "src": "./public/img/swiperImages/s2.jpeg",
+        "alt": "swiperImages"
+      },
+      "title": "only till xx.xx",
+      "paragraph": "all Giordani gold products 50% off",
+      "button": {
+        "href": "#",
+        "text": "start shopping"
+      }
+    },
+    {
+      "id": "3",
+      "href": "#",
+      "img": {
+        "src": "./public/img/swiperImages/s3.jpeg",
+        "alt": "swiperImages"
+      },
+      "title": "new spring collections",
+      "paragraph": "renew your energy with norrsken",
+      "button": {
+        "href": "#",
+        "text": "see the catalogue"
+      }
+    }
+  ]
+}

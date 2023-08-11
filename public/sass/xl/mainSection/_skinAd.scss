@@ -1,0 +1,87 @@
+section.skinAd {
+  width: 100%;
+  margin-bottom: 100px;
+  > .adContainer {
+    display: grid;
+    max-width: 1366px;
+    margin: 0 auto;
+    grid-template-areas: "banner details";
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    > .banner {
+      grid-area: banner;
+      width: 100%;
+      min-width: 683px;
+      position: relative;
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: -4px;
+      }
+    }
+    > .details {
+      grid-area: details;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: start;
+      width: 100%;
+      height: 100%;
+      padding: 0 80px;
+      background-color: var(--bf5f5f5);
+      > h2 {
+        font-size: 40px;
+        font-weight: 700;
+        font-family: sansOriBold, sansOri, sans-serif;
+        color: var(--tDark);
+        margin-bottom: 20px;
+      }
+      > p {
+        font-size: 14px;
+        font-weight: 400;
+        font-family: sansOri;
+        color: var(--tDark);
+        margin-bottom: 30px;
+      }
+      > a {
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--tDark);
+        text-transform: uppercase;
+        padding: 12px 23px;
+        border: 1px solid var(--tDark);
+        border-radius: 25px;
+        position: relative;
+        &:hover {
+          background-color: rgba(51, 51, 51, 0.04);
+        }
+        &:active {
+          &::after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 25px;
+            z-index: 0;
+            background-color: #aaaaaaa0;
+            animation-name: buttonFill;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

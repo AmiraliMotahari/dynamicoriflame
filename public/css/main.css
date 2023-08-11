@@ -1,0 +1,7 @@
+@import url("./settings.css");
+@import url("./xxl/xxl.css") screen and (min-width: 1400px);
+@import url("./xl/xl.css") screen and (min-width: 1200px) and (max-width: 1400px);
+@import url("./lg/lg.css") screen and (min-width: 992px) and (max-width: 1200px);
+@import url("./md/md.css") screen and (min-width: 768px) and (max-width: 992px);
+@import url("./sm/sm.css") screen and (min-width: 576px) and (max-width: 768px);
+@import url("./xs/xs.css") screen and (max-width: 576px);

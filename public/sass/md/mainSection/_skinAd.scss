@@ -1,0 +1,115 @@
+section.skinAd {
+  width: 100%;
+  margin-bottom: 100px;
+  > .adContainer {
+    display: grid;
+    max-width: 1366px;
+    margin: 0 auto;
+    grid-template-areas: "banner" "details";
+    grid-template-columns: 1fr;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    > .banner {
+      grid-area: banner;
+      width: 683px;
+      height: 100%;
+      position: relative;
+      justify-self: center;
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: -4px;
+      }
+      &::before {
+        display: block;
+        width: 100%;
+        content: "Science in perfect sync with your skin";
+        border-radius: 50%;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 700;
+        font-family: sansCondensedBold, sansOri, sans-serif;
+        color: white;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 478px;
+        height: 478px;
+        border-radius: 50%;
+        position: absolute;
+        top: 30%;
+        left: -60%;
+        background-color: rgb(240, 239, 251);
+        z-index: -1;
+      }
+    }
+    > .details {
+      grid-area: details;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: start;
+      width: 100%;
+      height: 100%;
+      padding: 0 80px 5px;
+      background-color: var(--bf5f5f5);
+      > h2 {
+        font-size: 40px;
+        font-weight: 700;
+        font-family: sansOriBold, sansOri, sans-serif;
+        color: var(--tDark);
+        margin-bottom: 20px;
+      }
+      > p {
+        font-size: 14px;
+        font-weight: 400;
+        font-family: sansOri;
+        color: var(--tDark);
+        margin-bottom: 30px;
+      }
+      > a {
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--tDark);
+        text-transform: uppercase;
+        padding: 12px 23px;
+        border: 1px solid var(--tDark);
+        border-radius: 25px;
+        position: relative;
+        &:hover {
+          background-color: rgba(51, 51, 51, 0.04);
+        }
+        &:active {
+          &::after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 25px;
+            z-index: 0;
+            background-color: #aaaaaaa0;
+            animation-name: buttonFill;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

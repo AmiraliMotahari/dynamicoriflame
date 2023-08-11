@@ -1,0 +1,9 @@
+@mixin test($nameOfDiv){
+    div.#{$nameOfDiv}{
+            &:hover{
+                >div.page{
+                    display: block;
+                }
+        }
+    }
+}

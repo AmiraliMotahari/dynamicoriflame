@@ -1,0 +1,286 @@
+section.whatsNew {
+  width: 100%;
+  margin: 30px 0 60px;
+  > .whatsNewContainer {
+    max-width: 1346px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+      "title"
+      "banner"
+      "products"
+      "productViewAll";
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0 15px;
+    > .title {
+      grid-area: title;
+      width: 100%;
+      background-color: var(--bgWhite);
+      position: relative;
+      > h2 {
+        color: var(--tDark);
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: capitalize;
+        text-align: center;
+        text-size-adjust: 100%;
+      }
+      > a {
+        text-decoration: none;
+        display: none;
+        height: 45px;
+        padding: 0 23px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 25px;
+        border: 1px solid var(--tDark);
+        color: var(--tDark);
+        background-color: var(--bgWhite);
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 45px;
+        &:hover {
+          background-color: rgba(51, 51, 51, 0.04);
+        }
+        &:active {
+          &::after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 25px;
+            z-index: -1;
+            background-color: #aaaaaaa0;
+            animation-name: buttonFill;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+          }
+        }
+      }
+    }
+    > .banner {
+      grid-area: banner;
+      height: 100%;
+      > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        > img {
+          width: 100%;
+          height: 100%;
+          //max-height: 370px;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 5px;
+        }
+        > span {
+          display: block;
+          position: absolute;
+          bottom: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 17px;
+          font-weight: 400;
+          text-transform: uppercase;
+          text-align: center;
+          color: var(--tWhite);
+          background-color: #00000016;
+          backdrop-filter: blur(30px);
+          padding: 10px 30px;
+          border-radius: 25px;
+          &:hover {
+            background-color: #ffffff16;
+          }
+        }
+      }
+    }
+    > .products {
+      grid-area: products;
+      height: 100%;
+      > .newProductsContainer {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        > .newProduct {
+          height: 100%;
+          > a {
+            text-decoration: none;
+            display: flex;
+            flex-flow: column;
+            justify-content: stretch;
+            align-items: center;
+            color: var(--t5);
+            // row-gap: 10px;
+            > div.imageFrame {
+              width: 100%;
+              overflow: hidden;
+              border-top-right-radius: 5px;
+              border-top-left-radius: 5px;
+              position: relative;
+              > img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition: 300ms ease-in-out;
+                margin-bottom: -4px;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+              }
+              &::before {
+                display: block;
+                content: "new";
+                font-size: 12px;
+                font-weight: 400;
+                text-align: center;
+                text-transform: capitalize;
+                color: var(--tWhite);
+                background-color: #63666a;
+                padding: 5px 10px;
+                border-radius: 10px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                z-index: 2;
+              }
+              > span {
+                display: block;
+                width: 45px;
+                height: 45px;
+                text-align: center;
+                text-transform: capitalize;
+                color: var(--tOriGreen);
+                background-color: var(--bgWhite);
+                border-radius: 10px;
+                position: absolute;
+                bottom: 10px;
+                right: 15px;
+                border-radius: 50%;
+                z-index: 2;
+                line-height: 45px;
+                font-size: 22px;
+                box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.16);
+                &:hover {
+                  font-weight: 700;
+                }
+              }
+            }
+            > .subFrame {
+              width: 100%;
+              height: 20px;
+              background-color: #f5f5f5;
+              margin: -4px 0 10px 0;
+              border-bottom-right-radius: 5px;
+              border-bottom-left-radius: 5px;
+            }
+            > p {
+              width: 100%;
+              font-size: 10px;
+              font-weight: 400;
+              text-align: left;
+              color: var(--t5);
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              margin-bottom: 10px;
+              &:nth-last-of-type(1) {
+                font-size: 14px;
+                letter-spacing: unset;
+                text-transform: capitalize;
+                // line-height: 19px;
+              }
+            }
+            > .productDetails {
+              width: 100%;
+              margin-bottom: 10px;
+              > p {
+                width: 100%;
+                font-size: 14px;
+                font-weight: 700;
+                text-align: left;
+                color: var(--t5);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                &::after {
+                  content: "\00A3 8.00";
+                  margin-left: 5px;
+                  text-decoration: line-through;
+                  color: var(--t9);
+                  font-weight: 400;
+                }
+              }
+              > .ratings {
+                display: flex;
+                margin-top: 2px;
+                flex-flow: row nowrap;
+                justify-content: start;
+                align-items: center;
+                column-gap: 2px;
+                &::after {
+                  content: "(0)";
+                  margin-left: 10px;
+                  font-size: 12px;
+                  font-weight: 400;
+                  color: var(--t5);
+                }
+                > span {
+                  font-size: 14px;
+                  color: rgb(229, 229, 229);
+                }
+              }
+            }
+          }
+          &:last-of-type {
+            display: none;
+          }
+          &:hover {
+            > a {
+              > .imageFrame {
+                > img {
+                  transform: scale(1.1, 1.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    > .productViewAll {
+      // width: 100%;
+      text-align: center;
+      > a {
+        text-decoration: none;
+        display: inline-block;
+        // width: auto;
+        height: 45px;
+        padding: 0 23px;
+        border-radius: 25px;
+        border: 1px solid var(--tDark);
+        color: var(--tDark);
+        background-color: var(--bgWhite);
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 45px;
+        &:hover {
+          background-color: #3333330a;
+        }
+      }
+    }
+  }
+}

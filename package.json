@@ -1,0 +1,36 @@
+{
+  "name": "oriflamedynamic",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sassMain": "node-sass -w public/sass/ -o public/css/ -r",
+    "sassMainMinify": "node-sass -w public/sass/ -o public/css/ -r --output-style compressed",
+    "settings": "node-sass -w public/sass/settings.scss -o public/css/ -r",
+    "settingsMinify": "node-sass -w public/sass/settings.scss -o public/css/ -r --output-style compressed",
+    "xxl": "node-sass -w public/sass/xxl.scss -o public/css/xxl; -r",
+    "xxlMinify": "node-sass -w public/sass/xxl.scss -o public/css/xxl -r --output-style compressed",
+    "xl": "node-sass -w public/sass/xl.scss -o public/css/xl; -r",
+    "xlMinify": "node-sass -w public/sass/xl.scss -o public/css/xl -r --output-style compressed",
+    "lg": "node-sass -w public/sass/lg.scss -o public/css/lg; -r",
+    "lgMinify": "node-sass -w public/sass/lg.scss -o public/css/lg -r --output-style compressed",
+    "md": "node-sass -w public/sass/md.scss -o public/css/md; -r",
+    "mdMinify": "node-sass -w public/sass/md.scss -o public/css/md -r --output-style compressed",
+    "sm": "node-sass -w public/sass/sm.scss -o public/css/sm; -r",
+    "smMinify": "node-sass -w public/sass/sm.scss -o public/css/sm -r --output-style compressed",
+    "xs": "node-sass -w public/sass/xs.scss -o public/css/xs; -r",
+    "xsMinify": "node-sass -w public/sass/xs.scss -o public/css/xs -r --output-style compressed",
+    "server": "json-server --watch public/db/db.json --port 3000"
+  },
+  "devDependencies": {
+    "sass": "^1.65.1",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "json-server": "^0.17.3",
+    "node-sass": "^9.0.0"
+  }
+}
