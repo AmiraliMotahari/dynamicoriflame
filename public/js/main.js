@@ -2,6 +2,39 @@ import globalFunctions from "./globalFunctions";
 import menu from "./menu";
 import views from "./views";
 
+
+//dynamics
+
+//whats new section dynamic!
+const whatsNew = document.querySelector("div.newProductsContainer");
+const whatsNewUrl = "http://localhost:3000/newProducts";
+
+await views.productView(whatsNew, whatsNewUrl);
+
+//best offers section dynamic!
+const bestOffers = document.querySelector("div.productOffersContainer");
+const bestOffersUrl = "http://localhost:3000/bestOffersProducts";
+
+await views.productView(bestOffers, bestOffersUrl);
+
+
+//hair and nail section dynamic!
+const hairAndNail = document.querySelector("section.hairNail div.productsContainer");
+const hairAndNailUrl = "http://localhost:3000/hairProducts";
+
+await views.productView(hairAndNail, hairAndNailUrl);
+
+//swiper
+const swiperTarget = document.getElementById("swiperTarget");
+const swiperlUrl = "http://localhost:3000/swiper";
+
+await views.swiperView(swiperTarget, swiperlUrl);
+
+//menu
+const menuTarget = document.getElementById("menuTarget");
+const menuUrl = "http://localhost:3000/menu";
+await views.menuView(menuTarget,menuUrl);
+
 //get window size
 let windowSize = window.innerWidth;
 let flag = 0;
@@ -443,28 +476,3 @@ function siteLinkDeactivator(e) {
   });
 }
 
-
-//whats new section dynamic!
-const whatsNew = document.querySelector("div.newProductsContainer");
-const whatsNewUrl = "http://localhost:3000/newProducts";
-
-views.productView(whatsNew, whatsNewUrl);
-
-//best offers section dynamic!
-const bestOffers = document.querySelector("div.productOffersContainer");
-const bestOffersUrl = "http://localhost:3000/bestOffersProducts";
-
-views.productView(bestOffers, bestOffersUrl);
-
-
-//hair and nail section dynamic!
-const hairAndNail = document.querySelector("section.hairNail div.productsContainer");
-const hairAndNailUrl = "http://localhost:3000/hairProducts";
-
-views.productView(hairAndNail, hairAndNailUrl);
-
-//swiper
-const swiperTarget = document.getElementById("swiperTarget");
-const swiperlUrl = "http://localhost:3000/swiper";
-
-views.swiperView(swiperTarget, swiperlUrl);

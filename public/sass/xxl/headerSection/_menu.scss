@@ -215,13 +215,14 @@ section.mainContainer {
               background-color: #e5e5e526;
             }
           }
+          //new change
           &:nth-of-type(16) > a:hover,
-          &:nth-of-type(15) > a:hover {
+          &:nth-of-type(17) > a:hover {
             background-color: unset;
             color: var(--tOriGreen);
           }
           $base: 1;
-          @for $i from 6 to 15 {
+          @for $i from 7 to 16 {
             &:nth-of-type(#{$i}) > a {
               &:hover {
                 background-color: var(--bsidh#{$base});
@@ -230,7 +231,7 @@ section.mainContainer {
             $base: $base + 1;
           }
           $base: 1;
-          @for $i from 6 to 15 {
+          @for $i from 7 to 16 {
             &:nth-of-type(#{$i}) > a {
               &::before {
                 content: "";
@@ -285,10 +286,9 @@ section.mainContainer {
                   }
                 }
               }
+              //new change
               > div.clumnOne,
-              div.clumnTwo,
-              div.clumnThree,
-              div.clumnFour {
+              div.clumnTwo {
                 > div.group {
                   display: flex;
                   flex-flow: column;
@@ -328,10 +328,10 @@ section.mainContainer {
               }
             }
           }
-          &:nth-of-type(3) > div.page {
+          &:nth-of-type(4) > div.page {
             display: block;
           }
-          &:nth-of-type(4) > div.page {
+          &:nth-of-type(5) > div.page {
             > div.containerBox {
               display: flex;
               margin: 0 auto;
@@ -393,7 +393,7 @@ section.mainContainer {
               }
             }
           }
-          &:nth-of-type(5) > div.page {
+          &:nth-of-type(6) > div.page {
             > a {
               display: block;
               //width: calc(100% / 4.75);

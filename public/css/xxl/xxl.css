@@ -184,28 +184,28 @@ section.mainContainer {
             section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > a:hover {
               background-color: #e5e5e526; }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(16) > a:hover,
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(15) > a:hover {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(17) > a:hover {
             background-color: unset;
             color: var(--tOriGreen); }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(6) > a:hover {
-            background-color: var(--bsidh1); }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(7) > a:hover {
-            background-color: var(--bsidh2); }
+            background-color: var(--bsidh1); }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(8) > a:hover {
-            background-color: var(--bsidh3); }
+            background-color: var(--bsidh2); }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(9) > a:hover {
-            background-color: var(--bsidh4); }
+            background-color: var(--bsidh3); }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(10) > a:hover {
-            background-color: var(--bsidh5); }
+            background-color: var(--bsidh4); }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(11) > a:hover {
-            background-color: var(--bsidh6); }
+            background-color: var(--bsidh5); }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(12) > a:hover {
-            background-color: var(--bsidh7); }
+            background-color: var(--bsidh6); }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(13) > a:hover {
-            background-color: var(--bsidh8); }
+            background-color: var(--bsidh7); }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(14) > a:hover {
+            background-color: var(--bsidh8); }
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(15) > a:hover {
             background-color: var(--bsidh9); }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(6) > a::before {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(7) > a::before {
             content: "";
             display: inline-block;
             width: 5px;
@@ -214,7 +214,7 @@ section.mainContainer {
             position: absolute;
             left: 1px;
             top: 0; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(7) > a::before {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(8) > a::before {
             content: "";
             display: inline-block;
             width: 5px;
@@ -223,7 +223,7 @@ section.mainContainer {
             position: absolute;
             left: 1px;
             top: 0; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(8) > a::before {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(9) > a::before {
             content: "";
             display: inline-block;
             width: 5px;
@@ -232,7 +232,7 @@ section.mainContainer {
             position: absolute;
             left: 1px;
             top: 0; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(9) > a::before {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(10) > a::before {
             content: "";
             display: inline-block;
             width: 5px;
@@ -241,7 +241,7 @@ section.mainContainer {
             position: absolute;
             left: 1px;
             top: 0; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(10) > a::before {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(11) > a::before {
             content: "";
             display: inline-block;
             width: 5px;
@@ -250,7 +250,7 @@ section.mainContainer {
             position: absolute;
             left: 1px;
             top: 0; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(11) > a::before {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(12) > a::before {
             content: "";
             display: inline-block;
             width: 5px;
@@ -259,7 +259,7 @@ section.mainContainer {
             position: absolute;
             left: 1px;
             top: 0; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(12) > a::before {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(13) > a::before {
             content: "";
             display: inline-block;
             width: 5px;
@@ -268,7 +268,7 @@ section.mainContainer {
             position: absolute;
             left: 1px;
             top: 0; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(13) > a::before {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(14) > a::before {
             content: "";
             display: inline-block;
             width: 5px;
@@ -277,7 +277,7 @@ section.mainContainer {
             position: absolute;
             left: 1px;
             top: 0; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(14) > a::before {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(15) > a::before {
             content: "";
             display: inline-block;
             width: 5px;
@@ -320,9 +320,7 @@ section.mainContainer {
                     height: 28px;
                     color: var(--tDark); }
               section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group,
-              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group,
-              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group,
-              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group {
+              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group {
                 display: flex;
                 flex-flow: column;
                 justify-content: left;
@@ -330,46 +328,36 @@ section.mainContainer {
                 margin-bottom: 30px;
                 padding-left: 5px; }
                 section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group > a,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > a,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group > a,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group > a {
+                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > a {
                   text-decoration: none;
                   color: var(--tDark);
                   font-size: 14px;
                   font-weight: 700;
                   margin: 0 0 15px; }
                   section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group > a:hover,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > a:hover,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group > a:hover,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group > a:hover {
+                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > a:hover {
                     color: var(--tOriGreen);
                     font-weight: 700; }
                 section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group > .innerGroup,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group > .innerGroup,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group > .innerGroup {
+                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup {
                   display: flex;
                   flex-flow: column;
                   justify-content: left;
                   align-items: left; }
                   section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group > .innerGroup > a,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup > a,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group > .innerGroup > a,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group > .innerGroup > a {
+                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup > a {
                     text-decoration: none;
                     color: var(--tDark);
                     font-size: 14px;
                     font-weight: 400;
                     margin: 0 0 15px; }
                     section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group > .innerGroup > a:hover,
-                    section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup > a:hover,
-                    section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group > .innerGroup > a:hover,
-                    section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group > .innerGroup > a:hover {
+                    section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup > a:hover {
                       color: var(--tOriGreen);
                       font-weight: 700; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(3) > div.page {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(4) > div.page {
             display: block; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(4) > div.page > div.containerBox {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > div.containerBox {
             display: flex;
             margin: 0 auto;
             width: 310px;
@@ -377,7 +365,7 @@ section.mainContainer {
             flex-flow: column wrap;
             padding: 20px 0;
             row-gap: 10px; }
-            section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(4) > div.page > div.containerBox > a {
+            section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > div.containerBox > a {
               text-decoration: none;
               text-align: center;
               text-transform: capitalize;
@@ -386,11 +374,11 @@ section.mainContainer {
               color: var(--tDark);
               position: relative;
               overflow: hidden; }
-              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(4) > div.page > div.containerBox > a > img {
+              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > div.containerBox > a > img {
                 width: 100%;
                 object-fit: cover;
                 border-radius: 10px; }
-              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(4) > div.page > div.containerBox > a > div.coverBack {
+              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > div.containerBox > a > div.coverBack {
                 width: 100%;
                 height: 99.2%;
                 background-color: rgba(0, 0, 0, 0.5);
@@ -400,37 +388,37 @@ section.mainContainer {
                 border-radius: 10px;
                 display: none;
                 transition: 300ms; }
-              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(4) > div.page > div.containerBox > a:hover {
+              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > div.containerBox > a:hover {
                 color: var(--t9); }
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(4) > div.page > div.containerBox > a:hover > div.coverBack {
+                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > div.containerBox > a:hover > div.coverBack {
                   display: block;
                   transition: 300ms; }
-              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(4) > div.page > div.containerBox > a:last-of-type {
+              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > div.containerBox > a:last-of-type {
                 display: block;
                 width: 70px;
                 margin: 0 auto;
                 text-transform: uppercase;
                 border-bottom: 2px solid var(--tDark); }
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(4) > div.page > div.containerBox > a:last-of-type:hover {
+                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > div.containerBox > a:last-of-type:hover {
                   color: var(--tDark); }
-            section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(4) > div.page > div.containerBox > p {
+            section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > div.containerBox > p {
               text-align: center;
               text-transform: capitalize;
               font-size: 14px;
               font-weight: 400;
               color: var(--t6); }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > a {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(6) > div.page > a {
             display: block;
             text-decoration: none;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%); }
-            section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > a > img {
+            section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(6) > div.page > a > img {
               width: 269px;
               height: 269px;
               object-fit: cover; }
-            section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(5) > div.page > a > span {
+            section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(6) > div.page > a > span {
               display: block;
               position: absolute;
               top: 50%;
@@ -800,42 +788,6 @@ section.mainContainer {
                   color: var(--t6); }
     section.mainContainer > nav > div.searchBoxRightWrapper {
       display: none; }
-
-.activator {
-  display: block !important; }
-
-.successColor {
-  color: var(--tSuccessGreen); }
-
-.fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 300ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; }
-
-.fadeOut {
-  animation-name: fadeOut;
-  animation-duration: 150ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; }
-
-@keyframes fadeIn {
-  0% {
-    display: block; }
-  1% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  99% {
-    opacity: 0; }
-  100% {
-    display: none; } }
 
 section.swiprContainer {
   width: 100%;

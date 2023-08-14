@@ -146,8 +146,8 @@
       "title": "new love potion ruby",
       "paragraph": "own your sensuality",
       "button": {
-        "href":"#",
-        "text":"shop now"
+        "href": "#",
+        "text": "shop now"
       }
     },
     {
@@ -177,6 +177,1070 @@
         "href": "#",
         "text": "see the catalogue"
       }
+    }
+  ],
+  "menu": [
+    {
+      "id": "1",
+      "name": "Best Offers",
+      "href": "#",
+      "kind": "linkOnly"
+    },
+    {
+      "id": "2",
+      "name": "eCatalogue",
+      "href": "#",
+      "kind": "catalogue",
+      "page": {
+        "name": "Catalogue 03",
+        "href": "#",
+        "paragraph": "1.2.2023 - 22.2.2023",
+        "img": {
+          "href": "#",
+          "src": "./public/img/catolagueImage.jpeg",
+          "alt": "CatalogueImage"
+        },
+        "button": {
+          "href": "#",
+          "name": "see all"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "name": "Inspiration",
+      "href": "#",
+      "kind": "inspiration",
+      "page": {
+        "img": {
+          "href": "#",
+          "src": "./public/img/ins.jpeg",
+          "alt": "InspirationImage",
+          "text": "editorials"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "Skin care",
+      "href": "#",
+      "kind": "main",
+      "page": {
+        "title": "what's new",
+        "col": [
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Moisturisers",
+                "innerGroup": [
+                  {
+                    "name": "Day cream",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Night cream",
+                    "href": "#"
+                  },
+                  {
+                    "name": "BB & CC cream",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Serum & Treatment",
+                "innerGroup": [
+                  {
+                    "name": "Serum & Booster",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Exfoliator",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Acne & Blemish",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Neck & Décolletage",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Eye & Lip care",
+                "innerGroup": [
+                  {
+                    "name": "Eye creams",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Lip care",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Cleansers",
+                "innerGroup": [
+                  {
+                    "name": "Cleanser",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Make-up remover",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Mask",
+                "innerGroup": [
+                  {
+                    "name": "Sheet masks",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Sther masks",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Sun care",
+                "innerGroup": [
+                  {
+                    "name": "Face sun cream<",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Sunscreen",
+                    "href": "#"
+                  },
+                  {
+                    "name": "After sun & Self-tanning",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Skin care tools",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Skin care sets",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Toner essences & Mist",
+                "innerGroup": []
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Brands",
+                "innerGroup": [
+                  {
+                    "name": "NovAge",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Waunt",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Love Nature",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Optimals",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Royal Velvet",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Sun 360",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "name": "Make-Up",
+      "href": "#",
+      "kind": "main",
+      "page": {
+        "title": "what's new",
+        "col": [
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Face",
+                "innerGroup": [
+                  {
+                    "name": "Foundation",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Concealer & Corrector",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Powder",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Contour & Highlighter",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Blush & Bronzer",
+                    "href": "#"
+                  },
+                  {
+                    "name": "BB & CC cream",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Primer & Setting mist",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Eyes",
+                "innerGroup": [
+                  {
+                    "name": "Mascara",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Eyeliner",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Eyeshadow",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Eyebrows",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Eye make-up remover",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Lips",
+                "innerGroup": [
+                  {
+                    "name": "Lipstick",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Lip gloss",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Lip liner",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Lip care",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Nails",
+                "innerGroup": [
+                  {
+                    "name": "Nail polish",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Base & Topcoat",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Nail care",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Nail polish remover",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Make-up tools",
+                "innerGroup": [
+                  {
+                    "name": "Brushes & Applicators",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Other make-up tools",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Palettes",
+                "innerGroup": []
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Brands",
+                "innerGroup": [
+                  {
+                    "name": "THE ONE",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Giordani Gold",
+                    "href": "#"
+                  },
+                  {
+                    "name": "OnColour",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "name": "Fragrance",
+      "href": "#",
+      "kind": "main",
+      "page": {
+        "title": "what's new",
+        "col": [
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Women",
+                "innerGroup": [
+                  {
+                    "name": "Fragrance",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Body care",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Body spray & Deodorant",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Bath & Shower",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Gift set & Purse spray",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Men",
+                "innerGroup": [
+                  {
+                    "name": "Fragrance",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Body spray & Deodorant",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Brands",
+                "innerGroup": [
+                  {
+                    "name": "Eclat",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Giordani Gold",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Giordani Man",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Lips",
+                "innerGroup": [
+                  {
+                    "name": "Lipstick",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Lip gloss",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Lip liner",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Lip care",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "name": "Bath & Body",
+      "href": "#",
+      "kind": "main",
+      "page": {
+        "title": "what's new",
+        "col": [
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Body care",
+                "innerGroup": [
+                  {
+                    "name": "Body moisturiser",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Hand care",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Foot care",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Anti-cellulite & Toning",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Bath & Shower",
+                "innerGroup": [
+                  {
+                    "name": "Body wash",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Soap",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Body scrub",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Other bath products",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Bath & Body tools",
+                "innerGroup": [
+                  {
+                    "name": "Manicure & Pedicure",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Body sponges & Others",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Intimate care",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Oral care",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Suncare",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Hair removal",
+                "innerGroup": []
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Deodorants & Anti-perspirants",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Brands",
+                "innerGroup": [
+                  {
+                    "name": "Swedish Spa",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Love Nature",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Feel Good",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Sun 360",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Feet Up",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "name": "Hair",
+      "href": "#",
+      "kind": "main",
+      "page": {
+        "title": "what's new",
+        "col": [
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Shampoo",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Conditioner",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Styling products",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Treatments",
+                "innerGroup": [
+                  {
+                    "name": "Hair mask",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Leave-in treatments",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Hair oil",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Hair tools & Accessories",
+                "innerGroup": [
+                  {
+                    "name": "Hair brushes & Combs",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Brands",
+                "innerGroup": [
+                  {
+                    "name": "Eleo",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Beautanicals",
+                    "href": "#"
+                  },
+                  {
+                    "name": "HairX",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Milk & Honey Gold",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Love Nature",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "9",
+      "name": "Accessories",
+      "href": "#",
+      "kind": "main",
+      "page": {
+        "title": "what's new",
+        "col": [
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Jewellery",
+                "innerGroup": [
+                  {
+                    "name": "Earrings",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Necklaces",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Watches & Others",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Fashion accessories",
+                "innerGroup": [
+                  {
+                    "name": "Bags & Purses",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Sunglasses",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Others",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Gifts",
+                "innerGroup": [
+                  {
+                    "name": "Gifts for her",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Gifts for him",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Brands",
+                "innerGroup": [
+                  {
+                    "name": "Norrsken",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "name": "Wellness",
+      "href": "#",
+      "kind": "main",
+      "page": {
+        "title": "what's new",
+        "col": [
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Supplements & Nutrition",
+                "innerGroup": [
+                  {
+                    "name": "Shakes",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Soups",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Vitamins & Minerals",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Antioxidants",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Omega 3",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Gut health",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Skin & Hair",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Kids",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Full solutions",
+                "innerGroup": []
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Accessories",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Brands",
+                "innerGroup": [
+                  {
+                    "name": "Wellness by Oriflame",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "11",
+      "name": "Men",
+      "href": "#",
+      "kind": "main",
+      "page": {
+        "title": "what's new",
+        "col": [
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Skin care",
+                "innerGroup": [
+                  {
+                    "name": "Cleanser",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Moisturiser & Treatments",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Shaving & Grooming",
+                "innerGroup": [
+                  {
+                    "name": "Shaving",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Beard care",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Body & Shower",
+                "innerGroup": [
+                  {
+                    "name": "Shower gel",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Soap bar",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Hair",
+                "innerGroup": [
+                  {
+                    "name": "Shampoo",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Accessories",
+                "innerGroup": [
+                  {
+                    "name": "Shaving & Grooming",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Gifts for him",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Fragrance",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Wellness",
+                "innerGroup": []
+              },
+              {
+                "href": "#",
+                "name": "Deodorants & Anti-perspirants",
+                "innerGroup": []
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Brands",
+                "innerGroup": [
+                  {
+                    "name": "Eclat",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Giordani Man",
+                    "href": "#"
+                  },
+                  {
+                    "name": "North for Men",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "name": "Kids & Baby",
+      "href": "#",
+      "kind": "main",
+      "page": {
+        "title": "what's new",
+        "col": [
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Kids",
+                "innerGroup": [
+                  {
+                    "name": "Hair & Body wash",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Body care",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Oral care",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Fragrance",
+                    "href": "#"
+                  }
+                ]
+              },
+              {
+                "href": "#",
+                "name": "Baby",
+                "innerGroup": [
+                  {
+                    "name": "Hair & Body wash",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Body care",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": [
+              {
+                "href": "#",
+                "name": "Brands",
+                "innerGroup": [
+                  {
+                    "name": "Baby O",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Love Nature",
+                    "href": "#"
+                  },
+                  {
+                    "name": "Optifresh",
+                    "href": "#"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "name": "Novelites",
+      "href": "#",
+      "kind": "linkOnly"
+    },
+    {
+      "id": "14",
+      "name": "Beauty Rewards Programme",
+      "href": "#",
+      "kind": "linkOnly"
     }
   ]
 }
