@@ -951,12 +951,17 @@ section.menuTabsContainer {
     display: flex;
     height: 100%;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     column-gap: 50px;
-    overflow: hidden;
-    position: absolute;
-    left: 48px; }
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+    scroll-padding-right: 48px;
+    padding: 0 48px; }
+    section.menuTabsContainer > div.tabsContainer::-webkit-scrollbar {
+      display: none; }
     section.menuTabsContainer > div.tabsContainer > div.tab {
       white-space: nowrap; }
       section.menuTabsContainer > div.tabsContainer > div.tab > a {

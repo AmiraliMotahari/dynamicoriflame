@@ -1,92 +1,98 @@
-section.menuTabsContainer{
+section.menuTabsContainer {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  margin-top: var(--menuHeight);
+  background-color: var(--bFa);
+  border-bottom: 4px solid rgb(245, 245, 245);
+  >span.showNextTab{
+      display: block;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      line-height: 48px;
+      color: var(--t5);
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      background-color: var(--bFa);
+      }
+  >span.showPrevTab{
+      display: none;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      line-height: 48px;
+      position: absolute;
+      color: var(--t5);
+      left: 0;
+      top: 0;
+      z-index: 2;
+      background-color: var(--bFa);
+  }
+  > div.tabsContainer {
     display: flex;
-    width: 100%;
-    height: 48px;
+    height: 100%;
     flex-flow: row nowrap;
-    justify-content: left;
+    justify-content: start;
     align-items: center;
-    position: relative;
-    margin-top: var(--menuHeight);
-    background-color: var(--bFa);
-    border-bottom: 4px solid rgb(245, 245, 245);
-    >span.showNextTab{
-        display: block;
-        width: 48px;
-        height: 48px;
-        text-align: center;
-        line-height: 48px;
-        color: var(--t5);
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        background-color: var(--bFa);
-        }
-    >span.showPrevTab{
+    column-gap: 50px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+    scroll-padding-right: 48px;
+    padding: 0 48px;
+    &::-webkit-scrollbar{
         display: none;
-        width: 48px;
-        height: 48px;
+    }
+    > div.tab {
+      white-space: nowrap;
+      > a {
+        text-decoration: none;
         text-align: center;
-        line-height: 48px;
-        position: absolute;
-        color: var(--t5);
-        left: 0;
-        top: 0;
-        z-index: 2;
-        background-color: var(--bFa);
-    }
-    >div.tabsContainer{
-        display: flex;
-        height: 100%;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        column-gap: 50px;
-        overflow: hidden;
-        position: absolute;
-        left: 48px;
-        >div.tab{
-            white-space: nowrap;
-            >a{
-                text-decoration: none;
-                text-align: center;
-                font-size: 12px;
-                font-weight: 700;
-                color: var(--tDark);
-                letter-spacing: 1.2px;
-                padding: 12px 4px;
-                text-transform: uppercase;
-                &:first-of-type{
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: center;
-                    align-items: center;
-                }
-                >span{
-                    display: block;
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 5px;
-                }
-                &:hover{
-                    color: var(--t5);
-                    >span{
-                        >svg{
-                            fill: var(--t5);
-                        }
-                    }
-                }
-            }
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--tDark);
+        letter-spacing: 1.2px;
+        padding: 12px 4px;
+        text-transform: uppercase;
+        &:first-of-type {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
         }
+        > span {
+          display: block;
+          width: 24px;
+          height: 24px;
+          margin-right: 5px;
+        }
+        &:hover {
+          color: var(--t5);
+          > span {
+            > svg {
+              fill: var(--t5);
+            }
+          }
+        }
+      }
     }
+  }
 }
-.clickShowMore{
-    right: 48px !important;
-    left: -50% !important;
+.clickShowMore {
+  right: 48px !important;
+  left: -50% !important;
 }
-.activator{
-    display: block !important;
+.activator {
+  display: block !important;
 }
-.deactivator{
-    display: none !important;
+.deactivator {
+  display: none !important;
 }

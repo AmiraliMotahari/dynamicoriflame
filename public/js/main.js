@@ -74,6 +74,7 @@ let vid1 = document.querySelector("video[id=vid1]");
 let siteLinkBtn = document.querySelectorAll(
   "section.siteLinks>div.container>div.col>h3"
 );
+let scrollable = tabsContainer.scrollWidth - tabsContainer.clientWidth;
 const pages = [
   ourStoryPage,
   joinUsPage,
@@ -250,6 +251,15 @@ window.addEventListener("resize", () => {
     windowMode = calcWindowMode();
     window.location.reload();
   }
+
+  //menu tabs
+   scrollable = tabsContainer.scrollWidth - tabsContainer.clientWidth;
+   if (scrollable === 0) {
+      showPervTab.classList.remove("activator");
+      showNextTab.classList.remove("activator");
+      showPervTab.classList.add("deactivator");
+      showNextTab.classList.add("deactivator");
+   }
 });
 
 //log in button
@@ -419,42 +429,94 @@ document.getElementById("deliveryClose").addEventListener("click", function () {
 
 //tabsContainer
 let flagMneuTab = 0;
-showNextTab.addEventListener("click", function (e) {
+// showNextTab.addEventListener("click", function (e) {
+//   e.stopPropagation();
+//   tabsContainer.classList.add("clickShowMore");
+//   showPervTab.classList.add("activator");
+//   if (windowSize > 576 && windowSize < 768 && flagMneuTab <= 135) {
+//     tabsContainer.style.left = `${-flagMneuTab}%`;
+//     flagMneuTab += 135;
+//   } else if (windowSize < 576 && flagMneuTab <= 245) {
+//     flagMneuTab += 35;
+//     tabsContainer.style.left = `${-flagMneuTab}%`;
+//     console.log(flagMneuTab);
+//   }
+//   if (windowSize < 576 && flagMneuTab > 245) {
+//     showNextTab.classList.add("deactivator");
+//   }
+//   if (windowSize > 576 && (windowSize >= 768 || flagMneuTab > 135)) {
+//     showNextTab.classList.add("deactivator");
+//   }
+// });
+// showPervTab.addEventListener("click", function (e) {
+//   e.stopPropagation();
+//   showNextTab.classList.remove("deactivator");
+//   if (windowSize > 576 && windowSize < 768 && flagMneuTab > 135) {
+//     flagMneuTab -= 135;
+//     tabsContainer.style.left = "0%";
+//   } else if ((windowSize > 576 && windowSize >= 768) || flagMneuTab <= 135) {
+//     flagMneuTab -= 135;
+//     tabsContainer.classList.remove("clickShowMore");
+//     this.classList.remove("activator");
+//     tabsContainer.style.left = "48px";
+//   } else if (windowSize < 576 && flagMneuTab > 0) {
+//     flagMneuTab -= 35;
+//     tabsContainer.style.left = `${-flagMneuTab}%`;
+//     console.log(flagMneuTab);
+//   }
+// });
+
+if (scrollable === 0) {
+  showPervTab.classList.remove("activator");
+  showNextTab.classList.remove("activator");
+  showPervTab.classList.add("deactivator");
+  showNextTab.classList.add("deactivator");
+}
+showNextTab.addEventListener("click",(e)=>{
   e.stopPropagation();
-  tabsContainer.classList.add("clickShowMore");
-  showPervTab.classList.add("activator");
-  if (windowSize > 576 && windowSize < 768 && flagMneuTab <= 135) {
-    tabsContainer.style.left = `${-flagMneuTab}%`;
-    flagMneuTab += 135;
-  } else if (windowSize < 576 && flagMneuTab <= 245) {
-    flagMneuTab += 35;
-    tabsContainer.style.left = `${-flagMneuTab}%`;
-    console.log(flagMneuTab);
+  if (window.innerWidth >= 768) {
+    tabsContainer.scrollLeft = scrollable;
   }
-  if (windowSize < 576 && flagMneuTab > 245) {
-    showNextTab.classList.add("deactivator");
+  else if (window.innerWidth >= 576 && window.innerWidth < 768) {
+    tabsContainer.scrollLeft += scrollable/2;
   }
-  if (windowSize > 576 && (windowSize >= 768 || flagMneuTab > 135)) {
-    showNextTab.classList.add("deactivator");
+  else if (window.innerWidth > 0 && window.innerWidth < 576) {
+    tabsContainer.scrollLeft += scrollable/3;
   }
 });
-showPervTab.addEventListener("click", function (e) {
+showPervTab.addEventListener("click",(e)=>{
   e.stopPropagation();
-  showNextTab.classList.remove("deactivator");
-  if (windowSize > 576 && windowSize < 768 && flagMneuTab > 135) {
-    flagMneuTab -= 135;
-    tabsContainer.style.left = "0%";
-  } else if ((windowSize > 576 && windowSize >= 768) || flagMneuTab <= 135) {
-    flagMneuTab -= 135;
-    tabsContainer.classList.remove("clickShowMore");
-    this.classList.remove("activator");
-    tabsContainer.style.left = "48px";
-  } else if (windowSize < 576 && flagMneuTab > 0) {
-    flagMneuTab -= 35;
-    tabsContainer.style.left = `${-flagMneuTab}%`;
-    console.log(flagMneuTab);
+  if (window.innerWidth >= 768) {
+    tabsContainer.scrollLeft = 0;
+  }
+  else if (window.innerWidth >= 576 && window.innerWidth < 768) {
+    tabsContainer.scrollLeft -= scrollable/2;
+  }
+  else if (window.innerWidth > 0 && window.innerWidth < 576) {
+    tabsContainer.scrollLeft -= scrollable/3;
   }
 });
+tabsContainer.addEventListener("scroll",e=>{
+  console.log(scrollable);
+  console.log(tabsContainer.scrollLeft);
+  e.stopPropagation();
+  if (tabsContainer.scrollLeft > 0) {
+    showPervTab.classList.remove("deactivator");
+    showPervTab.classList.add("activator");
+  }
+  else if (tabsContainer.scrollLeft === 0) {
+    showPervTab.classList.remove("activator");
+    showPervTab.classList.add("deactivator");
+  }
+  if (tabsContainer.scrollLeft === scrollable) {
+    showNextTab.classList.remove("activator");
+    showNextTab.classList.add("deactivator");
+  }
+  else if (tabsContainer.scrollLeft < scrollable) {
+    showNextTab.classList.add("activator");
+    showNextTab.classList.remove("deactivator");
+  }
+})
 
 //video play button
 vid1.addEventListener("click", function () {

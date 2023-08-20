@@ -900,7 +900,7 @@ section.menuTabsContainer {
   border-bottom: 4px solid whitesmoke; }
   section.menuTabsContainer > span.showNextTab {
     display: block;
-    width: 48px;
+    width: 24px;
     height: 48px;
     text-align: center;
     line-height: 48px;
@@ -912,7 +912,7 @@ section.menuTabsContainer {
     background-color: var(--bFa); }
   section.menuTabsContainer > span.showPrevTab {
     display: none;
-    width: 48px;
+    width: 24px;
     height: 48px;
     text-align: center;
     line-height: 48px;
@@ -926,12 +926,17 @@ section.menuTabsContainer {
     display: flex;
     height: 100%;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    column-gap: 50px;
-    overflow: hidden;
-    position: absolute;
-    left: 48px; }
+    column-gap: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+    scroll-padding-right: 24px;
+    padding: 0 24px; }
+    section.menuTabsContainer > div.tabsContainer::-webkit-scrollbar {
+      display: none; }
     section.menuTabsContainer > div.tabsContainer > div.tab {
       white-space: nowrap; }
       section.menuTabsContainer > div.tabsContainer > div.tab > a {
