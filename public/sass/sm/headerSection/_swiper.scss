@@ -144,7 +144,7 @@ section.swiprContainer{
           width: 35px;
           height: 6px;
           border-radius: 25px;
-          border: 0.5px solid black;
+          box-shadow: inset 0 0 2px 0px black;
         }
       }
     }

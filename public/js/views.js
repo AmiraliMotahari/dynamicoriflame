@@ -68,7 +68,7 @@ async function swiperView(target, url) {
                     <h4>${elem.title}</h4>
                     <h3>${elem.paragraph}</h3>
                     <div class="positioner">
-                      <a href="${elem.button.href}">${elem.button.text}</a>
+                      <a class="btnFill" href="${elem.button.href}">${elem.button.text}</a>
                     </div>
                   </div>
                 </div>

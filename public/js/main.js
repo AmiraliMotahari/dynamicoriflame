@@ -495,7 +495,7 @@ function siteLinkDeactivator(e) {
 
 
 //button effects
-const btnFills = document.querySelectorAll("a.btnFill")
+const btnFills = [...document.querySelectorAll(".btnFill")];
 
 btnFills.forEach((elem)=>{
   elem.addEventListener("mousedown", (e) => {
@@ -505,7 +505,7 @@ btnFills.forEach((elem)=>{
           radial-gradient(
               circle at ${e.offsetX}px ${e.offsetY}px,
               rgb(186,186,186) ${x}%,
-              whitesmoke ${x}%
+              rgba(1,1,1,0.1) ${x}%
       )`;
       x += 1;
 
@@ -517,22 +517,4 @@ btnFills.forEach((elem)=>{
       }
     }, 4);
   });
-  // elem.addEventListener("mouseup", (e) => {
-  //   setTimeout(() => {
-  //     let x = 100;
-  //     let tempInterval = setInterval(() => {
-  //       elem.style.background = `
-  //         radial-gradient(
-  //             circle at ${e.offsetX}px ${e.offsetY}px,
-  //             rgb(186,186,186) ${x}%,
-  //             whitesmoke ${x}%
-  //     )`;
-  //       x -= 1;
-
-  //       if (x < 0) {
-  //         clearInterval(tempInterval);
-  //       }
-  //     }, 1);
-  //   }, 300);
-  // });
 });
