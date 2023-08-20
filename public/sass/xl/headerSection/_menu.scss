@@ -173,6 +173,7 @@ section.mainContainer {
     }
     > div.menuPage {
       display: none;
+      opacity: 0;
       width: 100vw;
       height: calc(100vh - var(--menuHeight));
       position: absolute;
@@ -216,8 +217,8 @@ section.mainContainer {
               background-color: #e5e5e526;
             }
           }
-          &:nth-of-type(16) > a:hover,
-          &:nth-of-type(15) > a:hover {
+          &:nth-of-type(15) > a:hover,
+          &:nth-of-type(16) > a:hover {
             background-color: unset;
             color: var(--tOriGreen);
           }
@@ -288,9 +289,7 @@ section.mainContainer {
                 }
               }
               > div.clumnOne,
-              div.clumnTwo,
-              div.clumnThree,
-              div.clumnFour {
+              div.clumnTwo {
                 > div.group {
                   display: flex;
                   flex-flow: column;
@@ -431,6 +430,7 @@ section.mainContainer {
     }
     > div.shoppingBagPage {
       display: none;
+      opacity: 0;
       width: 100%;
       height: calc(100vh - var(--menuHeight));
       background-color: rgba(0, 0, 0, 0.2);
@@ -446,7 +446,6 @@ section.mainContainer {
         background-color: var(--bgWhite);
         margin-left: auto;
         position: relative;
-        opacity: 0;
         transition: 300ms;
         > h2 {
           padding: 20px;
@@ -501,6 +500,7 @@ section.mainContainer {
     }
     > div.ourStoryPage {
       display: none;
+      opacity: 0;
       width: 100vw;
       height: calc(100vh - var(--menuHeight));
       position: absolute;
@@ -580,6 +580,7 @@ section.mainContainer {
     }
     > div.joinUsPage {
       display: none;
+      opacity: 0;
       width: 100vw;
       height: calc(100vh - var(--menuHeight));
       position: absolute;
@@ -681,6 +682,7 @@ section.mainContainer {
     }
     > div.logInPage {
       display: none;
+      opacity: 0;
       width: 100vw;
       height: calc(100vh - var(--menuHeight));
       position: absolute;

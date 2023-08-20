@@ -93,6 +93,15 @@ main {
 .activator {
   display: block !important;
 }
+.deactivator {
+  display: none !important;
+}
+.flexActivator {
+  display: flex !important;
+}
+.flexDeactivator {
+  display: none !important;
+}
 .successColor {
   color: var(--tSuccessGreen);
 }
@@ -111,6 +120,8 @@ main {
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
+
+//animations
 @keyframes fadeIn {
   0% {
     display: block;
@@ -139,5 +150,15 @@ main {
   }
   100% {
     transform: scale(1, 1);
+  }
+}
+@keyframes pgaeAnimation{
+  0%{
+    left: -100%;
+    opacity: 0;
+  }
+  100%{
+    left: 0;
+    opacity: 1;
   }
 }

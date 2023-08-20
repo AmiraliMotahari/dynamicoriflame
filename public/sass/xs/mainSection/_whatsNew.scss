@@ -118,7 +118,7 @@ section.whatsNew {
         justify-content: center;
         justify-items: center;
         align-items: center;
-        > .newProduct {
+        > .product {
           height: 100%;
           > a {
             text-decoration: none;
@@ -208,19 +208,27 @@ section.whatsNew {
             > .productDetails {
               width: 100%;
               margin-bottom: 10px;
-              > p {
-                width: 100%;
-                font-size: 14px;
-                font-weight: 700;
-                text-align: left;
-                color: var(--t5);
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                &::after {
-                  content: "\00A3 8.00";
-                  margin-left: 5px;
+              > .price {
+                display: flex;
+                width: auto;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                column-gap: 5px;
+                > p.newPrice {
+                  width: auto;
+                  font-size: 14px;
+                  font-weight: 700;
+                  text-align: left;
+                  color: var(--t5);
+                  letter-spacing: 2px;
+                  text-transform: uppercase;
+                }
+                > p.oldPrice {
+                  width: 100%;
                   text-decoration: line-through;
                   color: var(--t9);
+                  font-size: 14px;
                   font-weight: 400;
                 }
               }
@@ -231,16 +239,32 @@ section.whatsNew {
                 justify-content: start;
                 align-items: center;
                 column-gap: 2px;
-                &::after {
-                  content: "(0)";
-                  margin-left: 10px;
-                  font-size: 12px;
-                  font-weight: 400;
-                  color: var(--t5);
+                > .starBox {
+                  position: relative;
+                  // > .prog {
+                  //   min-width: 92.81px;
+                  //   height: 24px;
+                  //   background-color: red;
+                  //   position: absolute;
+                  //   left: 0;
+                  //   top: 0;
+                  //   z-index: -1;
+                  // }
+                  > span {
+                    font-size: 14px;
+                    color: rgb(229, 229, 229);
+                  }
+                  >span.gold{
+                    color: rgb(128, 205, 208);
+                  }
                 }
-                > span {
-                  font-size: 14px;
-                  color: rgb(229, 229, 229);
+                > .count {
+                  > span {
+                    margin-left: 10px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: var(--t5);
+                  }
                 }
               }
             }

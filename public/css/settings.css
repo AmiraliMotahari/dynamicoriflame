@@ -79,6 +79,15 @@ main {
 .activator {
   display: block !important; }
 
+.deactivator {
+  display: none !important; }
+
+.flexActivator {
+  display: flex !important; }
+
+.flexDeactivator {
+  display: none !important; }
+
 .successColor {
   color: var(--tSuccessGreen); }
 
@@ -117,3 +126,11 @@ main {
     transform: scale(0, 0); }
   100% {
     transform: scale(1, 1); } }
+
+@keyframes pgaeAnimation {
+  0% {
+    left: -100%;
+    opacity: 0; }
+  100% {
+    left: 0;
+    opacity: 1; } }

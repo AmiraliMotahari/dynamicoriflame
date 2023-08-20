@@ -201,7 +201,6 @@ async function menuView(target, url) {
       return;
     }
   });
-  console.log(html);
   target.innerHTML += html.join("");
 }
 

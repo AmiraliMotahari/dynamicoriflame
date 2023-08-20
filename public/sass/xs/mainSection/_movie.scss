@@ -56,6 +56,9 @@ section.movie {
       }
       &:active {
         &::after {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
           display: block;
           content: "";
           width: 100%;

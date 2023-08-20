@@ -145,6 +145,7 @@ section.mainContainer {
           visibility: hidden; }
     section.mainContainer > nav > div.menuPage {
       display: none;
+      opacity: 0;
       width: 100vw;
       height: calc(100vh - var(--menuHeight));
       position: absolute;
@@ -182,8 +183,8 @@ section.mainContainer {
             position: relative; }
             section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > a:hover {
               background-color: #e5e5e526; }
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(16) > a:hover,
-          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(15) > a:hover {
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(15) > a:hover,
+          section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(16) > a:hover {
             background-color: unset;
             color: var(--tOriGreen); }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(6) > a:hover {
@@ -320,9 +321,7 @@ section.mainContainer {
                     height: 28px;
                     color: var(--tDark); }
               section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group,
-              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group,
-              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group,
-              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group {
+              section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group {
                 display: flex;
                 flex-flow: column;
                 justify-content: left;
@@ -330,41 +329,31 @@ section.mainContainer {
                 margin-bottom: 30px;
                 padding-left: 5px; }
                 section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group > a,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > a,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group > a,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group > a {
+                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > a {
                   text-decoration: none;
                   color: var(--tDark);
                   font-size: 14px;
                   font-weight: 700;
                   margin: 0 0 15px; }
                   section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group > a:hover,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > a:hover,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group > a:hover,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group > a:hover {
+                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > a:hover {
                     color: var(--tOriGreen);
                     font-weight: 700; }
                 section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group > .innerGroup,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group > .innerGroup,
-                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group > .innerGroup {
+                section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup {
                   display: flex;
                   flex-flow: column;
                   justify-content: left;
                   align-items: left; }
                   section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group > .innerGroup > a,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup > a,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group > .innerGroup > a,
-                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group > .innerGroup > a {
+                  section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup > a {
                     text-decoration: none;
                     color: var(--tDark);
                     font-size: 14px;
                     font-weight: 400;
                     margin: 0 0 15px; }
                     section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper > div.clumnOne > div.group > .innerGroup > a:hover,
-                    section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup > a:hover,
-                    section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnThree > div.group > .innerGroup > a:hover,
-                    section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnFour > div.group > .innerGroup > a:hover {
+                    section.mainContainer > nav > div.menuPage > div.menuContainer > div.content > div.page > div.wrapper div.clumnTwo > div.group > .innerGroup > a:hover {
                       color: var(--tOriGreen);
                       font-weight: 700; }
           section.mainContainer > nav > div.menuPage > div.menuContainer > div.content:nth-of-type(3) > div.page {
@@ -445,6 +434,7 @@ section.mainContainer {
           display: none; }
     section.mainContainer > nav > div.shoppingBagPage {
       display: none;
+      opacity: 0;
       width: 100%;
       height: calc(100vh - var(--menuHeight));
       background-color: rgba(0, 0, 0, 0.2);
@@ -460,7 +450,6 @@ section.mainContainer {
         background-color: var(--bgWhite);
         margin-left: auto;
         position: relative;
-        opacity: 0;
         transition: 300ms; }
         section.mainContainer > nav > div.shoppingBagPage > div.shoppingContainer > h2 {
           padding: 20px;
@@ -507,6 +496,7 @@ section.mainContainer {
             transition: 300ms; }
     section.mainContainer > nav > div.ourStoryPage {
       display: none;
+      opacity: 0;
       width: 100vw;
       height: calc(100vh - var(--menuHeight));
       position: absolute;
@@ -575,6 +565,7 @@ section.mainContainer {
                 z-index: 2; }
     section.mainContainer > nav > div.joinUsPage {
       display: none;
+      opacity: 0;
       width: 100vw;
       height: calc(100vh - var(--menuHeight));
       position: absolute;
@@ -659,6 +650,7 @@ section.mainContainer {
             transition: 300ms; }
     section.mainContainer > nav > div.logInPage {
       display: none;
+      opacity: 0;
       width: 100vw;
       height: calc(100vh - var(--menuHeight));
       position: absolute;
@@ -925,6 +917,12 @@ section.swiprContainer {
                     transition: 300ms; }
         section.swiprContainer .swiper > .swiper-wrapper > .swiper-slide:nth-of-type(2) > .slideWrapper > .contentWrapper > .swiperContent > h4, section.swiprContainer .swiper > .swiper-wrapper > .swiper-slide:nth-of-type(2) > .slideWrapper > .contentWrapper > .swiperContent h3 {
           color: var(--tWhite); }
+    section.swiprContainer .swiper .swiper-pagination .swiper-pagination-bullet {
+      background-color: white;
+      width: 35px;
+      height: 6px;
+      border-radius: 25px;
+      border: 0.5px solid black; }
 
 section.menuTabsContainer {
   display: flex;
@@ -1160,7 +1158,8 @@ section.supportBtn {
 
 section.whatsNew {
   width: 100%;
-  margin: 60px 0 100px; }
+  margin: 60px 0 100px;
+  padding-right: 20px; }
   section.whatsNew > .whatsNewContainer {
     max-width: 1346px;
     margin: 0 auto;
@@ -1265,22 +1264,22 @@ section.whatsNew {
         justify-content: center;
         justify-items: center;
         align-items: center; }
-        section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct {
+        section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product {
           height: 100%; }
-          section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a {
+          section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a {
             text-decoration: none;
             display: flex;
             flex-flow: column;
             justify-content: stretch;
             align-items: center;
             color: var(--t5); }
-            section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > div.imageFrame {
+            section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > div.imageFrame {
               width: 100%;
               overflow: hidden;
               border-top-right-radius: 5px;
               border-top-left-radius: 5px;
               position: relative; }
-              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > div.imageFrame > img {
+              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > div.imageFrame > img {
                 width: 100%;
                 object-fit: cover;
                 object-position: center;
@@ -1288,7 +1287,7 @@ section.whatsNew {
                 margin-bottom: -4px;
                 border-top-right-radius: 5px;
                 border-top-left-radius: 5px; }
-              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > div.imageFrame::before {
+              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > div.imageFrame::before {
                 display: block;
                 content: "new";
                 font-size: 12px;
@@ -1303,7 +1302,7 @@ section.whatsNew {
                 top: 10px;
                 left: 10px;
                 z-index: 2; }
-              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > div.imageFrame > span {
+              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > div.imageFrame > span {
                 display: block;
                 width: 45px;
                 height: 45px;
@@ -1320,16 +1319,16 @@ section.whatsNew {
                 line-height: 45px;
                 font-size: 22px;
                 box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.16); }
-                section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > div.imageFrame > span:hover {
+                section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > div.imageFrame > span:hover {
                   font-weight: 700; }
-            section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > .subFrame {
+            section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > .subFrame {
               width: 100%;
               height: 20px;
               background-color: #f5f5f5;
               margin: -4px 0 10px 0;
               border-bottom-right-radius: 5px;
               border-bottom-left-radius: 5px; }
-            section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > p {
+            section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > p {
               width: 100%;
               font-size: 10px;
               font-weight: 400;
@@ -1338,44 +1337,54 @@ section.whatsNew {
               letter-spacing: 2px;
               text-transform: uppercase;
               margin-bottom: 10px; }
-              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > p:nth-last-of-type(1) {
+              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > p:nth-last-of-type(1) {
                 font-size: 14px;
                 letter-spacing: unset;
                 text-transform: capitalize; }
-            section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > .productDetails {
+            section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > .productDetails {
               width: 100%;
               margin-bottom: 10px; }
-              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > .productDetails > p {
-                width: 100%;
-                font-size: 14px;
-                font-weight: 700;
-                text-align: left;
-                color: var(--t5);
-                letter-spacing: 2px;
-                text-transform: uppercase; }
-                section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > .productDetails > p::after {
-                  content: "\00A3 8.00";
-                  margin-left: 5px;
+              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > .productDetails > .price {
+                display: flex;
+                width: auto;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                column-gap: 5px; }
+                section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > .productDetails > .price > p.newPrice {
+                  width: auto;
+                  font-size: 14px;
+                  font-weight: 700;
+                  text-align: left;
+                  color: var(--t5);
+                  letter-spacing: 2px;
+                  text-transform: uppercase; }
+                section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > .productDetails > .price > p.oldPrice {
+                  width: 100%;
                   text-decoration: line-through;
                   color: var(--t9);
+                  font-size: 14px;
                   font-weight: 400; }
-              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > .productDetails > .ratings {
+              section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > .productDetails > .ratings {
                 display: flex;
                 margin-top: 2px;
                 flex-flow: row nowrap;
                 justify-content: start;
                 align-items: center;
                 column-gap: 2px; }
-                section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > .productDetails > .ratings::after {
-                  content: "(0)";
+                section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > .productDetails > .ratings > .starBox {
+                  position: relative; }
+                  section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > .productDetails > .ratings > .starBox > span {
+                    font-size: 14px;
+                    color: #e5e5e5; }
+                  section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > .productDetails > .ratings > .starBox > span.gold {
+                    color: #80cdd0; }
+                section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product > a > .productDetails > .ratings > .count > span {
                   margin-left: 10px;
                   font-size: 12px;
                   font-weight: 400;
                   color: var(--t5); }
-                section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct > a > .productDetails > .ratings > span {
-                  font-size: 14px;
-                  color: #e5e5e5; }
-          section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .newProduct:hover > a > .imageFrame > img {
+          section.whatsNew > .whatsNewContainer > .products > .newProductsContainer > .product:hover > a > .imageFrame > img {
             transform: scale(1.1, 1.1); }
     section.whatsNew > .whatsNewContainer > .productViewAll {
       display: none; }
@@ -1517,22 +1526,22 @@ section.bestOffers {
         justify-content: center;
         justify-items: center;
         align-items: center; }
-        section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers {
+        section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product {
           height: 100%; }
-          section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a {
+          section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a {
             text-decoration: none;
             display: flex;
             flex-flow: column;
             justify-content: stretch;
             align-items: center;
             color: var(--t5); }
-            section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > div.imageFrame {
+            section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > div.imageFrame {
               width: 100%;
               overflow: hidden;
               border-top-right-radius: 5px;
               border-top-left-radius: 5px;
               position: relative; }
-              section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > div.imageFrame > img {
+              section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > div.imageFrame > img {
                 width: 100%;
                 object-fit: cover;
                 object-position: center;
@@ -1540,7 +1549,7 @@ section.bestOffers {
                 margin-bottom: -4px;
                 border-top-right-radius: 5px;
                 border-top-left-radius: 5px; }
-              section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > div.imageFrame > span {
+              section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > div.imageFrame > span {
                 display: block;
                 width: 45px;
                 height: 45px;
@@ -1557,16 +1566,16 @@ section.bestOffers {
                 line-height: 45px;
                 font-size: 22px;
                 box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.16); }
-                section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > div.imageFrame > span:hover {
+                section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > div.imageFrame > span:hover {
                   font-weight: 700; }
-            section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > .subFrame {
+            section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > .subFrame {
               width: 100%;
               height: 20px;
               background-color: #f5f5f5;
               margin: -4px 0 10px 0;
               border-bottom-right-radius: 5px;
               border-bottom-left-radius: 5px; }
-            section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > p {
+            section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > p {
               width: 100%;
               font-size: 10px;
               font-weight: 400;
@@ -1575,44 +1584,54 @@ section.bestOffers {
               letter-spacing: 2px;
               text-transform: uppercase;
               margin-bottom: 10px; }
-              section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > p:nth-last-of-type(1) {
+              section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > p:nth-last-of-type(1) {
                 font-size: 14px;
                 letter-spacing: unset;
                 text-transform: capitalize; }
-            section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > .productDetails {
+            section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > .productDetails {
               width: 100%;
               margin-bottom: 10px; }
-              section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > .productDetails > p {
-                width: 100%;
-                font-size: 14px;
-                font-weight: 700;
-                text-align: left;
-                color: var(--t5);
-                letter-spacing: 2px;
-                text-transform: uppercase; }
-                section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > .productDetails > p::after {
-                  content: "\00A3 36.00";
-                  margin-left: 5px;
+              section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > .productDetails > .price {
+                display: flex;
+                width: auto;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                column-gap: 5px; }
+                section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > .productDetails > .price > p.newPrice {
+                  width: auto;
+                  font-size: 14px;
+                  font-weight: 700;
+                  text-align: left;
+                  color: var(--t5);
+                  letter-spacing: 2px;
+                  text-transform: uppercase; }
+                section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > .productDetails > .price > p.oldPrice {
+                  width: 100%;
                   text-decoration: line-through;
                   color: var(--t9);
+                  font-size: 14px;
                   font-weight: 400; }
-              section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > .productDetails > .ratings {
+              section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > .productDetails > .ratings {
                 display: flex;
                 margin-top: 2px;
                 flex-flow: row nowrap;
                 justify-content: start;
                 align-items: center;
                 column-gap: 2px; }
-                section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > .productDetails > .ratings::after {
-                  content: "(5)";
+                section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > .productDetails > .ratings > .starBox {
+                  position: relative; }
+                  section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > .productDetails > .ratings > .starBox > span {
+                    font-size: 14px;
+                    color: #e5e5e5; }
+                  section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > .productDetails > .ratings > .starBox > span.gold {
+                    color: #80cdd0; }
+                section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product > a > .productDetails > .ratings > .count > span {
                   margin-left: 10px;
                   font-size: 12px;
                   font-weight: 400;
                   color: var(--t5); }
-                section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers > a > .productDetails > .ratings > span {
-                  color: #9acbcf;
-                  font-size: 14px; }
-          section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .productsOffers:hover > a > .imageFrame > img {
+          section.bestOffers > .bestOffersContainer > .products > .productOffersContainer > .product:hover > a > .imageFrame > img {
             transform: scale(1.1, 1.1); }
     section.bestOffers > .bestOffersContainer > .productViewOffer {
       display: none; }
@@ -1880,19 +1899,26 @@ section.hairNail {
             section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails {
               width: 100%;
               margin-bottom: 10px; }
-              section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > p {
-                width: 100%;
-                font-size: 14px;
-                font-weight: 700;
-                text-align: left;
-                color: var(--t5);
-                letter-spacing: 2px;
-                text-transform: uppercase; }
-                section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > p::after {
-                  content: "\00A3 29.99";
-                  margin-left: 5px;
+              section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > .price {
+                display: flex;
+                width: auto;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                column-gap: 5px; }
+                section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > .price > p.newPrice {
+                  width: auto;
+                  font-size: 14px;
+                  font-weight: 700;
+                  text-align: left;
+                  color: var(--t5);
+                  letter-spacing: 2px;
+                  text-transform: uppercase; }
+                section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > .price > p.oldPrice {
+                  width: 100%;
                   text-decoration: line-through;
                   color: var(--t9);
+                  font-size: 14px;
                   font-weight: 400; }
               section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > .ratings {
                 display: flex;
@@ -1901,15 +1927,18 @@ section.hairNail {
                 justify-content: start;
                 align-items: center;
                 column-gap: 2px; }
-                section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > .ratings::after {
-                  content: "(0)";
+                section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > .ratings > .starBox {
+                  position: relative; }
+                  section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > .ratings > .starBox > span {
+                    font-size: 14px;
+                    color: #e5e5e5; }
+                  section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > .ratings > .starBox > span.gold {
+                    color: #80cdd0; }
+                section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > .ratings > .count > span {
                   margin-left: 10px;
                   font-size: 12px;
                   font-weight: 400;
                   color: var(--t5); }
-                section.hairNail > .hairNailContainer > .products > .productsContainer > .product > a > .productDetails > .ratings > span {
-                  font-size: 14px;
-                  color: #e5e5e5; }
           section.hairNail > .hairNailContainer > .products > .productsContainer > .product:hover > a > .imageFrame > img {
             transform: scale(1.1, 1.1); }
     section.hairNail > .hairNailContainer > .productShopNow {

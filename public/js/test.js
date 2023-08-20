@@ -1,10 +1,32 @@
-import views from "./views";
+divParent.addEventListener("mousedown", (e) => {
+    let x = 0;
+    let tempInterval = setInterval(() => {
+      divParent.style.background = `
+          radial-gradient(
+              circle at ${e.offsetX}px ${e.offsetY}px,
+              red ${x}%,
+              whitesmoke ${x}%
+      )`;
+      x += 1;
 
-const menuTarget = document.querySelector(".root")
-const menuUrl = "http://localhost:3000/menu";
+      if (x > 100) {
+        clearInterval(tempInterval);
+      }
+    }, 1);
+  });
+  divParent.addEventListener("mouseup", (e) => {
+    let x = 100;
+    let tempInterval = setInterval(() => {
+      divParent.style.background = `
+          radial-gradient(
+              circle at ${e.offsetX}px ${e.offsetY}px,
+              red ${x}%,
+              whitesmoke ${x}%
+      )`;
+      x -= 1;
 
-views.menuView(menuTarget, menuUrl);
-
-
-let a= [1,2,3,4,5]
-a.map()
+      if (x < 0) {
+        clearInterval(tempInterval);
+      }
+    }, 1);
+  });

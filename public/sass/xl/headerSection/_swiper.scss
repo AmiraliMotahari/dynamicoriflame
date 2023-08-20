@@ -137,5 +137,14 @@ section.swiprContainer{
             }
         }
       }
+      .swiper-pagination{
+        .swiper-pagination-bullet{
+          background-color: rgb(255, 255, 255);
+          width: 35px;
+          height: 6px;
+          border-radius: 25px;
+          border: 0.5px solid black;
+        }
+      }
     }
 }

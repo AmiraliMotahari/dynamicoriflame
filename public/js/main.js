@@ -1,7 +1,8 @@
+//debugger
+
 import globalFunctions from "./globalFunctions";
 import menu from "./menu";
 import views from "./views";
-
 
 //dynamics
 
@@ -17,9 +18,10 @@ const bestOffersUrl = "http://localhost:3000/bestOffersProducts";
 
 await views.productView(bestOffers, bestOffersUrl);
 
-
 //hair and nail section dynamic!
-const hairAndNail = document.querySelector("section.hairNail div.productsContainer");
+const hairAndNail = document.querySelector(
+  "section.hairNail div.productsContainer"
+);
 const hairAndNailUrl = "http://localhost:3000/hairProducts";
 
 await views.productView(hairAndNail, hairAndNailUrl);
@@ -31,12 +33,8 @@ const swiperlUrl = "http://localhost:3000/swiper";
 await views.swiperView(swiperTarget, swiperlUrl);
 
 //menu
-const menuTarget = document.getElementById("menuTarget");
-const menuUrl = "http://localhost:3000/menu";
-await views.menuView(menuTarget,menuUrl);
+await menu.menuCreator();
 
-//get window size
-let windowSize = window.innerWidth;
 let flag = 0;
 let flag2 = 0;
 let menuButton = document.querySelector("div.menuButton");
@@ -46,7 +44,6 @@ let shoppingbPage = document.querySelector("div.shoppingBagPage");
 let activator = document.querySelectorAll("div.menuContainer>div.content");
 let menuPage = document.querySelector("section.mainContainer>nav>div.menuPage");
 let groupPage = document.querySelectorAll("div.group");
-let target = document.querySelector("div.menuContainer>div.content>div.page");
 let ourStoryButton = document.getElementById("ourStory");
 let ourStoryPage = document.querySelector("div.ourStoryPage");
 let joinUsButton = document.getElementById("joinUs");
@@ -72,22 +69,23 @@ let showPervTab = document.querySelector(
   "section.menuTabsContainer>span.showPrevTab"
 );
 let root = document.querySelector(":root");
-let rootStyle = getComputedStyle(root);
 let playVid = document.querySelector("button[id=playVid]");
 let vid1 = document.querySelector("video[id=vid1]");
 let siteLinkBtn = document.querySelectorAll(
   "section.siteLinks>div.container>div.col>h3"
 );
-let siteLinkContent = document.querySelectorAll(
-  "section.siteLinks>div.container>div.col>div.content"
-);
-const pages = [ourStoryPage,joinUsPage,searchBoxRightWrapper,logInPage,shoppingbPage];
+const pages = [
+  ourStoryPage,
+  joinUsPage,
+  searchBoxRightWrapper,
+  logInPage,
+  shoppingbPage,
+];
 
-
+//scroll
 document.addEventListener("scroll", function () {
   root.style.setProperty("--menuHeight", "60px");
 });
-
 
 function shoppingLogoDeactivator() {
   document
@@ -125,38 +123,46 @@ function toggleMenuPageDetails() {
   });
   menuPageFooter.classList.toggle("flexDeactivator");
 }
-function dynamicMenu() {
-  // console.log(windowSize);
-  //menu button
-  menuButton.addEventListener("click", function () {
-    if (windowSize > 992) {
+
+// let windowSize = window.innerWidth;
+function calcWindowMode() {
+  return window.innerWidth > 992 ? "big" : "small";
+}
+
+let windowMode = calcWindowMode();
+
+function dynamicMenu(wMode) {
+  // menu button
+  menuButton.addEventListener("click", () => {
+    if (wMode === "big") {
       if (flag === 0) {
         flag = menu.menuButtonActivator();
         globalFunctions.ac_de(menuPage, pages);
       } else {
         flag = menu.menuButtonDeactivator();
       }
-    } else if (windowSize < 992) {
+    } else {
+      flag = menu.menuButtonActivator();
       globalFunctions.ac_de(menuPage, pages);
-
-      document.querySelector("div.menuPage").classList.add("activator"); //check this out!!!!!!!!
     }
   });
+
   //menu page --->page
-  if (window.innerWidth > 992) {
+  if (wMode === "big") {
     activator.forEach((elem) => {
-      elem.addEventListener("mouseenter", () => {
-        if (window.innerWidth > 992) {
-          deactivator();
-          elem.childNodes[3].classList.add("activator");
-        }
+      elem.addEventListener("mouseenter", (e) => {
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        console.log("whyyyyyyyy");
+        deactivator();
+        elem.childNodes[3].classList.add("activator");
       });
     });
-  } 
-  else{
+  } else if (wMode === "small") {
     activator.forEach((elem) => {
-      elem.addEventListener("click", (e)=> {
+      elem.addEventListener("click", (e) => {
         e.stopPropagation();
+        e.stopImmediatePropagation();
         deactivator2(elem);
         elem.childNodes[3].classList.toggle("activator");
         if (elem.childNodes[3].classList.contains("activator")) {
@@ -167,11 +173,11 @@ function dynamicMenu() {
       });
     });
   }
-  menuPage.addEventListener("click", function (e) {
+  menuPage.addEventListener("click", (e) => {
     e.stopPropagation();
     if (e.target === menuPage) {
       //e.target.classList.toggle("activator");
-      flag = menu.menuButtonDeactivator();
+      flag2 = menu.menuButtonDeactivator();
       if (flag2 === 1) {
         toggleMenuPageDetails();
         menuLogInBtn.style.backgroundColor = "";
@@ -180,7 +186,7 @@ function dynamicMenu() {
       }
     }
   });
-  if (window.innerWidth <= 992) {
+  if (wMode === "small") {
     groupPage.forEach((elem) => {
       elem.addEventListener("click", function (e) {
         e.stopPropagation();
@@ -195,11 +201,12 @@ function dynamicMenu() {
         }
       });
     });
+
     //mini manu page
-    miniMenuButton.addEventListener("click", function (e) {
+    miniMenuButton.addEventListener("click", (e) => {
       e.stopPropagation();
       if (flag2 === 0) {
-        flag = menu.menuButtonDeactivator();
+        flag2 = menu.menuButtonDeactivator();
       } else {
         toggleMenuPageDetails();
         menuLogInBtn.style.backgroundColor = "";
@@ -207,31 +214,41 @@ function dynamicMenu() {
         flag2 = 0;
       }
     });
-    console.log(flag2);
   }
+
+  //mini menu login page
+  menuLogInBtn.addEventListener("click", (e) => {
+    console.log(menuLogInBtn);
+    e.stopPropagation();
+    if (flag2 === 0) {
+      toggleMenuPageDetails();
+      menuLogInBtn.style.backgroundColor = "white";
+      miniMenuButton.style.backgroundColor = "#f5f5f5";
+      flag2 = 1;
+    } else {
+      flag2 = menu.menuButtonDeactivator();
+      toggleMenuPageDetails();
+      menuLogInBtn.style.backgroundColor = "";
+      miniMenuButton.style.backgroundColor = "";
+      // flag2 = 0;
+    }
+  });
 }
 
 //menu button
-dynamicMenu(window.innerWidth);
-window.addEventListener("resize",()=>{
-  dynamicMenu(window.innerWidth);
-});
-
-//mini menu login page
-menuLogInBtn.addEventListener("click", function (e) {
-  e.stopPropagation();
-  if (flag2 === 0) {
-    toggleMenuPageDetails();
-    this.style.backgroundColor = "white";
-    miniMenuButton.style.backgroundColor = "#f5f5f5";
-    flag2 = 1;
-  } else {
+dynamicMenu(windowMode);
+const temp = menuPage.innerHTML;
+window.addEventListener("resize", () => {
+  if (windowMode === "small" && window.innerWidth > 992) {
     flag = menu.menuButtonDeactivator();
-    toggleMenuPageDetails();
-    this.style.backgroundColor = "";
-    miniMenuButton.style.backgroundColor = "";
     flag2 = 0;
-    console.log(flag2);
+    windowMode = calcWindowMode();
+    window.location.reload();
+  } else if (windowMode === "big" && window.innerWidth <= 992) {
+    flag = menu.menuButtonDeactivator();
+    flag2 = 0;
+    windowMode = calcWindowMode();
+    window.location.reload();
   }
 });
 
@@ -281,7 +298,7 @@ document.addEventListener("click", function (e) {
 });
 //mini search button
 searchIconRight.addEventListener("click", function () {
-  globalFunctions.ac_de(searchBoxRightWrapper,pages);
+  globalFunctions.ac_de(searchBoxRightWrapper, pages);
   flag = menu.menuButtonDeactivator();
   // shoppingBagPageDeactivator();
 });
@@ -295,7 +312,7 @@ searchBoxRightWrapper.addEventListener("click", function (e) {
 //shopping bag
 shoppingBag.addEventListener("mouseenter", function () {
   flag = menu.menuButtonDeactivator();
-  globalFunctions.ac_de(shoppingbPage,pages);
+  globalFunctions.ac_de(shoppingbPage, pages);
 });
 shoppingBag.addEventListener("click", function () {
   flag = menu.menuButtonDeactivator();
@@ -316,7 +333,7 @@ document
 //ourstory page
 ourStoryButton.addEventListener("click", function (e) {
   e.stopPropagation();
-  globalFunctions.ac_de(ourStoryPage,pages);
+  globalFunctions.ac_de(ourStoryPage, pages);
   flag = menu.menuButtonDeactivator();
 });
 ourStoryPage.addEventListener("click", function (e) {
@@ -332,7 +349,7 @@ ourStoryPage.addEventListener("click", function (e) {
 //join us page
 joinUsButton.addEventListener("click", function () {
   // joinUsPage.classList.toggle("activator");
-  globalFunctions.ac_de(joinUsPage,pages);
+  globalFunctions.ac_de(joinUsPage, pages);
   flag = menu.menuButtonDeactivator();
 });
 joinUsPage.addEventListener("click", function (e) {
@@ -345,7 +362,7 @@ joinUsPage.addEventListener("click", function (e) {
 
 //login
 logInButton.addEventListener("click", function () {
-  globalFunctions.ac_de(logInPage,pages);
+  globalFunctions.ac_de(logInPage, pages);
   flag = menu.menuButtonDeactivator();
 });
 logInPage.addEventListener("click", function (e) {
@@ -476,3 +493,46 @@ function siteLinkDeactivator(e) {
   });
 }
 
+
+//button effects
+const btnFills = document.querySelectorAll("a.btnFill")
+
+btnFills.forEach((elem)=>{
+  elem.addEventListener("mousedown", (e) => {
+    let x = 0;
+    let tempInterval = setInterval(() => {
+      elem.style.background = `
+          radial-gradient(
+              circle at ${e.offsetX}px ${e.offsetY}px,
+              rgb(186,186,186) ${x}%,
+              whitesmoke ${x}%
+      )`;
+      x += 1;
+
+      if (x > 100) {
+        clearInterval(tempInterval);
+        setTimeout(() => {
+          elem.style.background = "";
+        }, 100);
+      }
+    }, 4);
+  });
+  // elem.addEventListener("mouseup", (e) => {
+  //   setTimeout(() => {
+  //     let x = 100;
+  //     let tempInterval = setInterval(() => {
+  //       elem.style.background = `
+  //         radial-gradient(
+  //             circle at ${e.offsetX}px ${e.offsetY}px,
+  //             rgb(186,186,186) ${x}%,
+  //             whitesmoke ${x}%
+  //     )`;
+  //       x -= 1;
+
+  //       if (x < 0) {
+  //         clearInterval(tempInterval);
+  //       }
+  //     }, 1);
+  //   }, 300);
+  // });
+});

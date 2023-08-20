@@ -1,6 +1,7 @@
 import views from "./views";
 
 function menuButtonActivator() {
+  console.log("hi");
   document.getElementById("midLine").style.left = "100%";
   document.getElementById("midLine").style.opacity = "0";
 
@@ -15,14 +16,11 @@ function menuButtonActivator() {
   document.querySelector("div.menuPage").classList.remove("fadeOut");
   document.querySelector("div.menuPage").classList.add("activator");
   document.querySelector("div.menuPage").classList.add("fadeIn");
-  // setTimeout(() => {
-  //   document.querySelector("div.menuPage>div.menuContainer").style.opacity =
-  //     "1";
-  // }, 100);
 
   return 1;
 }
 function menuButtonDeactivator() {
+  console.log("bye");
   document.getElementById("midLine").style.left = "";
   document.getElementById("midLine").style.opacity = "1";
 
@@ -37,6 +35,7 @@ function menuButtonDeactivator() {
   document.querySelector("div.menuPage").classList.remove("fadeIn");
   document.querySelector("div.menuPage").classList.add("fadeOut");
   setTimeout(() => {
+    document.querySelector("div.menuPage").classList.remove("fadeIn");
     document.querySelector("div.menuPage").classList.remove("activator");
     document.querySelector("div.menuPage").classList.remove("fadeOut");
   }, 150);
@@ -99,7 +98,15 @@ async function menuCreator(){
                   </div>
                 </div>
               </div>
-              <div class="menuPageFooter">
+            </div>
+  `;
+
+  const t = document.getElementById("menuTarget");
+  const u = "http://localhost:3000/menu";
+
+  await views.menuView(t,u);
+
+  t.innerHTML += `<div class="menuPageFooter">
                 <a href="#">who we are</a>
                 <a href="#">Product philosophy</a>
                 <a href="#">Sustainability</a>
@@ -116,14 +123,7 @@ async function menuCreator(){
                       ></path></svg></span
                   >support center</a
                 >
-              </div>
-            </div>
-  `;
-
-  const t = document.getElementById("menuTarget");
-  const u = "http://localhost:3000/menu";
-
-  await views.menuView(t,u)
+              </div>`;
 }
 
 
