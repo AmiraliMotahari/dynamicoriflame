@@ -346,13 +346,22 @@ shoppingBag.addEventListener("click", function () {
 shoppingBag.addEventListener("mouseleave", shoppingLogoDeactivator);
 document
   .querySelector("div.shoppingBagPage>div.shoppingContainer")
-  .addEventListener("mouseleave", function () {
+  .addEventListener("mouseleave", (e) => {
+    e.stopPropagation(e);
     setTimeout(() => {
       shoppingbPage.classList.remove("activator");
     }, 150);
     shoppingbPage.classList.remove("fadeIn");
     shoppingbPage.classList.add("fadeOut");
   });
+document.querySelector("div.shoppingBagPage").addEventListener("click", (e) => {
+  e.stopPropagation();
+  setTimeout(() => {
+    shoppingbPage.classList.remove("activator");
+  }, 150);
+  shoppingbPage.classList.remove("fadeIn");
+  shoppingbPage.classList.add("fadeOut");
+});
 
 //ourstory page
 ourStoryButton.addEventListener("click", function (e) {
