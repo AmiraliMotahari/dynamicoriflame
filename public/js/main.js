@@ -82,12 +82,17 @@ const searchResult = document.querySelector("div.searchResult");
 const searchResultTarget = document.querySelector(
   "div.searchResult>div.container"
 );
+const miniSearchInput = document.querySelector("input#miniSearch");
+const miniSearchResult = document.querySelector("div.miniSearchResult");
+const miniSearchResultTarget = document.querySelector(
+  "div.miniSearchResult>div.container"
+);
 const pages = [
   ourStoryPage,
   joinUsPage,
   searchBoxRightWrapper,
   logInPage,
-  shoppingbPage
+  shoppingbPage,
 ];
 
 //scroll
@@ -554,10 +559,41 @@ searchInput.addEventListener("focus", (e) => {
   }
 });
 
-
 //mini search
+miniSearchInput.addEventListener("keyup", async (e) => {
+  e.stopPropagation();
+  miniSearchResult.classList.add("activator");
+  miniSearchResult.classList.add("fadeIn");
 
+  const nn2 = await search.searchForData(e.target.value);
+  await views.searchView(nn2, miniSearchResultTarget);
 
+  if (miniSearchInput.value === null || miniSearchInput.value === "") {
+    miniSearchResult.classList.remove("activator");
+    miniSearchResult.classList.remove("fadeIn");
+  }
+});
+miniSearchInput.addEventListener("blur", (e) => {
+  e.stopPropagation();
+  miniSearchResult.classList.remove("fadeIn");
+  miniSearchResult.classList.add("fadeOut");
+  setTimeout(() => {
+    miniSearchResult.classList.remove("fadeOut");
+    miniSearchResult.classList.remove("activator");
+    globalFunctions.pageDeactivator(searchBoxRightWrapper);
+  }, 150);
+});
+miniSearchInput.addEventListener("focus", (e) => {
+  e.stopPropagation();
+
+  if (miniSearchInput.value !== null || miniSearchInput.value !== "") {
+    miniSearchResult.classList.add("activator");
+    miniSearchResult.classList.add("fadeIn");
+  } else if (miniSearchInput.value === null || miniSearchInput.value === "") {
+    miniSearchResult.classList.remove("activator");
+    miniSearchResult.classList.remove("fadeIn");
+  }
+});
 
 //button effects
 const btnFills = [...document.querySelectorAll(".btnFill")];

@@ -20,6 +20,9 @@ function pageActivator(target) {
 }
 function ac_de(target, arr) {
   arr.forEach((element) => {
+    pageDeactivator(element);
+  });
+  arr.forEach((element) => {
     if (target !== element) {
       if (target.classList.contains("shoppingBagPage")) {
         document

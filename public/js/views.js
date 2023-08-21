@@ -230,7 +230,7 @@ async function searchView(data, target) {
   if (!flag) {
     target.innerHTML = html.join("");
   }else{
-     target.innerHTML = `<div class="content">
+     target.innerHTML = `<div class="content double">
       <h5>Nothin found!</h5>
      </div>`;
   }
