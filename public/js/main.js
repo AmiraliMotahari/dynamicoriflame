@@ -87,12 +87,11 @@ const pages = [
   joinUsPage,
   searchBoxRightWrapper,
   logInPage,
-  shoppingbPage,
+  shoppingbPage
 ];
 
 //scroll
 window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
   if (window.scrollY > 0) {
     root.style.setProperty("--menuHeight", "60px");
   } else {
@@ -166,7 +165,6 @@ function dynamicMenu(wMode) {
       elem.addEventListener("mouseenter", (e) => {
         e.stopPropagation();
         e.stopImmediatePropagation();
-        console.log("whyyyyyyyy");
         deactivator();
         elem.childNodes[3].classList.add("activator");
       });
@@ -231,7 +229,6 @@ function dynamicMenu(wMode) {
 
   //mini menu login page
   menuLogInBtn.addEventListener("click", (e) => {
-    console.log(menuLogInBtn);
     e.stopPropagation();
     if (flag2 === 0) {
       toggleMenuPageDetails();
@@ -379,7 +376,6 @@ joinUsPage.addEventListener("click", function (e) {
   if (e.target === joinUsPage) {
     e.target.classList.toggle("activator");
   }
-  console.log(e.target);
 });
 
 //login
@@ -438,46 +434,6 @@ document.getElementById("deliveryClose").addEventListener("click", function () {
 });
 
 //menu tabs
-
-//tabsContainer
-let flagMneuTab = 0;
-// showNextTab.addEventListener("click", function (e) {
-//   e.stopPropagation();
-//   tabsContainer.classList.add("clickShowMore");
-//   showPervTab.classList.add("activator");
-//   if (windowSize > 576 && windowSize < 768 && flagMneuTab <= 135) {
-//     tabsContainer.style.left = `${-flagMneuTab}%`;
-//     flagMneuTab += 135;
-//   } else if (windowSize < 576 && flagMneuTab <= 245) {
-//     flagMneuTab += 35;
-//     tabsContainer.style.left = `${-flagMneuTab}%`;
-//     console.log(flagMneuTab);
-//   }
-//   if (windowSize < 576 && flagMneuTab > 245) {
-//     showNextTab.classList.add("deactivator");
-//   }
-//   if (windowSize > 576 && (windowSize >= 768 || flagMneuTab > 135)) {
-//     showNextTab.classList.add("deactivator");
-//   }
-// });
-// showPervTab.addEventListener("click", function (e) {
-//   e.stopPropagation();
-//   showNextTab.classList.remove("deactivator");
-//   if (windowSize > 576 && windowSize < 768 && flagMneuTab > 135) {
-//     flagMneuTab -= 135;
-//     tabsContainer.style.left = "0%";
-//   } else if ((windowSize > 576 && windowSize >= 768) || flagMneuTab <= 135) {
-//     flagMneuTab -= 135;
-//     tabsContainer.classList.remove("clickShowMore");
-//     this.classList.remove("activator");
-//     tabsContainer.style.left = "48px";
-//   } else if (windowSize < 576 && flagMneuTab > 0) {
-//     flagMneuTab -= 35;
-//     tabsContainer.style.left = `${-flagMneuTab}%`;
-//     console.log(flagMneuTab);
-//   }
-// });
-
 if (scrollable === 0) {
   showPervTab.classList.remove("activator");
   showNextTab.classList.remove("activator");
@@ -505,8 +461,6 @@ showPervTab.addEventListener("click", (e) => {
   }
 });
 tabsContainer.addEventListener("scroll", (e) => {
-  console.log(scrollable);
-  console.log(tabsContainer.scrollLeft);
   e.stopPropagation();
   if (tabsContainer.scrollLeft > 0) {
     showPervTab.classList.remove("deactivator");
@@ -562,12 +516,14 @@ function siteLinkDeactivator(e) {
 }
 
 //search
-
-console.log(searchInput.value);
 searchInput.addEventListener("keyup", async (e) => {
   e.stopPropagation();
   searchResult.classList.add("activator");
   searchResult.classList.add("fadeIn");
+
+  globalFunctions.ac_de(menuPage, pages);
+  flag = menu.menuButtonDeactivator();
+
   const nn1 = await search.searchForData(e.target.value);
   await views.searchView(nn1, searchResultTarget);
 
@@ -587,6 +543,8 @@ searchInput.addEventListener("blur", (e) => {
 });
 searchInput.addEventListener("focus", (e) => {
   e.stopPropagation();
+  globalFunctions.ac_de(menuPage, pages);
+  flag = menu.menuButtonDeactivator();
   if (searchInput.value !== null || searchInput.value !== "") {
     searchResult.classList.add("activator");
     searchResult.classList.add("fadeIn");
@@ -595,6 +553,11 @@ searchInput.addEventListener("focus", (e) => {
     searchResult.classList.remove("fadeIn");
   }
 });
+
+
+//mini search
+
+
 
 //button effects
 const btnFills = [...document.querySelectorAll(".btnFill")];

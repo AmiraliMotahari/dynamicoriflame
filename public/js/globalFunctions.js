@@ -6,7 +6,11 @@ function pageDeactivator(target) {
 function pageActivator(target) {
   target.classList.toggle("fadeIn");
   target.classList.remove("fadeOut");
-  if (target.classList.contains("fadeIn") || target.classList.contains("activator")) {
+  pageDeactivator(document.querySelector("div.searchResult"));
+  if (
+    target.classList.contains("fadeIn") ||
+    target.classList.contains("activator")
+  ) {
     setTimeout(() => {
       target.classList.toggle("activator");
     }, 150);
