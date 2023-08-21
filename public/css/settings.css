@@ -76,6 +76,10 @@ main {
   --Y: 0deg;
   --menuHeight: 80px; }
 
+html, body {
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity; }
+
 .activator {
   display: block !important; }
 

@@ -13,7 +13,8 @@ section.mainContainer {
     position: fixed;
     z-index: 999999;
     background-color: var(--bgWhite);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05); }
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    transition: 300ms ease-in-out; }
     section.mainContainer > nav > div.left {
       width: 100%;
       display: flex;

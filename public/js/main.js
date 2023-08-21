@@ -1,7 +1,9 @@
 //debugger
 
+import fetchData from "./fetch";
 import globalFunctions from "./globalFunctions";
 import menu from "./menu";
+import search from "./search";
 import views from "./views";
 
 //dynamics
@@ -75,6 +77,11 @@ let siteLinkBtn = document.querySelectorAll(
   "section.siteLinks>div.container>div.col>h3"
 );
 let scrollable = tabsContainer.scrollWidth - tabsContainer.clientWidth;
+const searchInput = document.querySelector("input#search");
+const searchResult = document.querySelector("div.searchResult");
+const searchResultTarget = document.querySelector(
+  "div.searchResult>div.container"
+);
 const pages = [
   ourStoryPage,
   joinUsPage,
@@ -84,8 +91,13 @@ const pages = [
 ];
 
 //scroll
-document.addEventListener("scroll", function () {
-  root.style.setProperty("--menuHeight", "60px");
+window.addEventListener("scroll", function () {
+  console.log(window.scrollY);
+  if (window.scrollY > 0) {
+    root.style.setProperty("--menuHeight", "60px");
+  } else {
+    root.style.setProperty("--menuHeight", "");
+  }
 });
 
 function shoppingLogoDeactivator() {
@@ -253,13 +265,13 @@ window.addEventListener("resize", () => {
   }
 
   //menu tabs
-   scrollable = tabsContainer.scrollWidth - tabsContainer.clientWidth;
-   if (scrollable === 0) {
-      showPervTab.classList.remove("activator");
-      showNextTab.classList.remove("activator");
-      showPervTab.classList.add("deactivator");
-      showNextTab.classList.add("deactivator");
-   }
+  scrollable = tabsContainer.scrollWidth - tabsContainer.clientWidth;
+  if (scrollable === 0) {
+    showPervTab.classList.remove("activator");
+    showNextTab.classList.remove("activator");
+    showPervTab.classList.add("deactivator");
+    showNextTab.classList.add("deactivator");
+  }
 });
 
 //log in button
@@ -472,51 +484,45 @@ if (scrollable === 0) {
   showPervTab.classList.add("deactivator");
   showNextTab.classList.add("deactivator");
 }
-showNextTab.addEventListener("click",(e)=>{
+showNextTab.addEventListener("click", (e) => {
   e.stopPropagation();
   if (window.innerWidth >= 768) {
     tabsContainer.scrollLeft = scrollable;
-  }
-  else if (window.innerWidth >= 576 && window.innerWidth < 768) {
-    tabsContainer.scrollLeft += scrollable/2;
-  }
-  else if (window.innerWidth > 0 && window.innerWidth < 576) {
-    tabsContainer.scrollLeft += scrollable/3;
+  } else if (window.innerWidth >= 576 && window.innerWidth < 768) {
+    tabsContainer.scrollLeft += scrollable / 2;
+  } else if (window.innerWidth > 0 && window.innerWidth < 576) {
+    tabsContainer.scrollLeft += scrollable / 3;
   }
 });
-showPervTab.addEventListener("click",(e)=>{
+showPervTab.addEventListener("click", (e) => {
   e.stopPropagation();
   if (window.innerWidth >= 768) {
     tabsContainer.scrollLeft = 0;
-  }
-  else if (window.innerWidth >= 576 && window.innerWidth < 768) {
-    tabsContainer.scrollLeft -= scrollable/2;
-  }
-  else if (window.innerWidth > 0 && window.innerWidth < 576) {
-    tabsContainer.scrollLeft -= scrollable/3;
+  } else if (window.innerWidth >= 576 && window.innerWidth < 768) {
+    tabsContainer.scrollLeft -= scrollable / 2;
+  } else if (window.innerWidth > 0 && window.innerWidth < 576) {
+    tabsContainer.scrollLeft -= scrollable / 3;
   }
 });
-tabsContainer.addEventListener("scroll",e=>{
+tabsContainer.addEventListener("scroll", (e) => {
   console.log(scrollable);
   console.log(tabsContainer.scrollLeft);
   e.stopPropagation();
   if (tabsContainer.scrollLeft > 0) {
     showPervTab.classList.remove("deactivator");
     showPervTab.classList.add("activator");
-  }
-  else if (tabsContainer.scrollLeft === 0) {
+  } else if (tabsContainer.scrollLeft === 0) {
     showPervTab.classList.remove("activator");
     showPervTab.classList.add("deactivator");
   }
   if (tabsContainer.scrollLeft === scrollable) {
     showNextTab.classList.remove("activator");
     showNextTab.classList.add("deactivator");
-  }
-  else if (tabsContainer.scrollLeft < scrollable) {
+  } else if (tabsContainer.scrollLeft < scrollable) {
     showNextTab.classList.add("activator");
     showNextTab.classList.remove("deactivator");
   }
-})
+});
 
 //video play button
 vid1.addEventListener("click", function () {
@@ -555,11 +561,45 @@ function siteLinkDeactivator(e) {
   });
 }
 
+//search
+
+console.log(searchInput.value);
+searchInput.addEventListener("keyup", async (e) => {
+  e.stopPropagation();
+  searchResult.classList.add("activator");
+  searchResult.classList.add("fadeIn");
+  const nn1 = await search.searchForData(e.target.value);
+  await views.searchView(nn1, searchResultTarget);
+
+  if (searchInput.value === null || searchInput.value === "") {
+    searchResult.classList.remove("activator");
+    searchResult.classList.remove("fadeIn");
+  }
+});
+searchInput.addEventListener("blur", (e) => {
+  e.stopPropagation();
+  searchResult.classList.remove("fadeIn");
+  searchResult.classList.add("fadeOut");
+  setTimeout(() => {
+    searchResult.classList.remove("fadeOut");
+    searchResult.classList.remove("activator");
+  }, 150);
+});
+searchInput.addEventListener("focus", (e) => {
+  e.stopPropagation();
+  if (searchInput.value !== null || searchInput.value !== "") {
+    searchResult.classList.add("activator");
+    searchResult.classList.add("fadeIn");
+  } else if (searchInput.value === null || searchInput.value === "") {
+    searchResult.classList.remove("activator");
+    searchResult.classList.remove("fadeIn");
+  }
+});
 
 //button effects
 const btnFills = [...document.querySelectorAll(".btnFill")];
 
-btnFills.forEach((elem)=>{
+btnFills.forEach((elem) => {
   elem.addEventListener("mousedown", (e) => {
     let x = 0;
     let tempInterval = setInterval(() => {
@@ -567,7 +607,7 @@ btnFills.forEach((elem)=>{
           radial-gradient(
               circle at ${e.offsetX}px ${e.offsetY}px,
               rgb(186,186,186) ${x}%,
-              rgba(1,1,1,0.1) ${x}%
+              #3333330A ${x}%
       )`;
       x += 1;
 

@@ -90,6 +90,10 @@ main {
 
 
 //global 
+html,body{
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
+}
 .activator {
   display: block !important;
 }
