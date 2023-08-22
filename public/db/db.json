@@ -140,7 +140,7 @@
       "id": "1",
       "href": "#",
       "img": {
-        "src": "./public/img/swiperImages/s1.jpeg",
+        "src": "./img/swiperImages/s1.jpeg",
         "alt": "swiperImages"
       },
       "title": "new love potion ruby",
@@ -154,7 +154,7 @@
       "id": "2",
       "href": "#",
       "img": {
-        "src": "./public/img/swiperImages/s2.jpeg",
+        "src": "./img/swiperImages/s2.jpeg",
         "alt": "swiperImages"
       },
       "title": "only till xx.xx",
@@ -168,7 +168,7 @@
       "id": "3",
       "href": "#",
       "img": {
-        "src": "./public/img/swiperImages/s3.jpeg",
+        "src": "./img/swiperImages/s3.jpeg",
         "alt": "swiperImages"
       },
       "title": "new spring collections",
@@ -197,7 +197,7 @@
         "paragraph": "1.2.2023 - 22.2.2023",
         "img": {
           "href": "#",
-          "src": "./public/img/catolagueImage.jpeg",
+          "src": "./img/catolagueImage.jpeg",
           "alt": "CatalogueImage"
         },
         "button": {
@@ -214,7 +214,7 @@
       "page": {
         "img": {
           "href": "#",
-          "src": "./public/img/ins.jpeg",
+          "src": "./img/ins.jpeg",
           "alt": "InspirationImage",
           "text": "editorials"
         }
