@@ -1,7 +1,7 @@
-import globalFunctions from "./globalFunctions";
-import menu from "./menu";
-import search from "./search";
-import views from "./views";
+import globalFunctions from "./globalFunctions.js";
+import menu from "./menu.js";
+import search from "./search.js";
+import views from "./views.js";
 import Swiper from "../public/swiper/swiper-bundle.min.mjs";
 
 async function main() {
