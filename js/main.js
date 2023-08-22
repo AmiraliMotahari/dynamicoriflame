@@ -2,7 +2,7 @@ import globalFunctions from "./globalFunctions";
 import menu from "./menu";
 import search from "./search";
 import views from "./views";
-import Swiper from "swiper/bundle";
+import Swiper from "../public/swiper/swiper-bundle.min.mjs";
 
 async function main() {
   //dynamics
