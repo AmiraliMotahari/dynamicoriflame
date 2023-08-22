@@ -1,4 +1,4 @@
-import views from "./views";
+import views from "./views.js";
 
 function menuButtonActivator() {
   console.log("hi");

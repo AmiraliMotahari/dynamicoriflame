@@ -1,4 +1,4 @@
-import fetchData from "./fetch";
+import fetchData from "./fetch.js";
 
 function stars(count) {
   let html = "";
