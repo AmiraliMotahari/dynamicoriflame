@@ -102,9 +102,14 @@ async function menuCreator(){
   `;
 
   const t = document.getElementById("menuTarget");
-  const u = "http://localhost:3000/menu";
+  // locally with json-server
+  // const u = "http://localhost:3000/menu";
 
-  await views.menuView(t,u);
+  //github page
+  const u =
+    "https://my-json-server.typicode.com/AmiraliMotahari/serveroriflame/menu";
+
+  await views.menuView(t, u);
 
   t.innerHTML += `<div class="menuPageFooter">
                 <a href="#">who we are</a>

@@ -9,13 +9,23 @@ async function main() {
 
   //whats new section dynamic!
   const whatsNew = document.querySelector("div.newProductsContainer");
-  const whatsNewUrl = "http://localhost:3000/newProducts";
+  //locally with json-server
+  // const whatsNewUrl = "http://localhost:3000/newProducts";
+
+  //github page
+  const whatsNewUrl =
+    "https://my-json-server.typicode.com/AmiraliMotahari/serveroriflame2/newProducts";
 
   await views.productView(whatsNew, whatsNewUrl);
 
   //best offers section dynamic!
   const bestOffers = document.querySelector("div.productOffersContainer");
-  const bestOffersUrl = "http://localhost:3000/bestOffersProducts";
+  // locally with json-server
+  // const bestOffersUrl = "http://localhost:3000/bestOffersProducts";
+
+  //githubpage
+  const bestOffersUrl =
+    "https://my-json-server.typicode.com/AmiraliMotahari/serveroriflame2/bestOffersProducts";
 
   await views.productView(bestOffers, bestOffersUrl);
 
@@ -23,13 +33,23 @@ async function main() {
   const hairAndNail = document.querySelector(
     "section.hairNail div.productsContainer"
   );
-  const hairAndNailUrl = "http://localhost:3000/hairProducts";
+  // locally with json-server
+  // const hairAndNailUrl = "http://localhost:3000/hairProducts";
+
+  //github page
+  const hairAndNailUrl =
+    "https://my-json-server.typicode.com/AmiraliMotahari/serveroriflame2/hairProducts";
 
   await views.productView(hairAndNail, hairAndNailUrl);
 
   //swiper
   const swiperTarget = document.getElementById("swiperTarget");
-  const swiperlUrl = "http://localhost:3000/swiper";
+  // locally with json-server
+  // const swiperlUrl = "http://localhost:3000/swiper";
+
+  //github page
+  const swiperlUrl =
+    "https://my-json-server.typicode.com/AmiraliMotahari/serveroriflame2/swiper";
 
   await views.swiperView(swiperTarget, swiperlUrl);
 
@@ -380,9 +400,6 @@ async function main() {
       e.target.classList.toggle("activator");
     }
   });
-  // document.querySelector("div.ourStoryPage>div.ourStoryContainer").addEventListener("mouseleave",function(){
-  //     ourStoryPageDeactivator();
-  // });
 
   //join us page
   joinUsButton.addEventListener("click", function () {

@@ -1,12 +1,25 @@
 import fetchData from "./fetch";
 
 async function getAllData() {
-  const newProducts = await fetchData("http://localhost:3000/newProducts");
-  const bestOffersProducts = await fetchData(
-    "http://localhost:3000/bestOffersProducts"
-  );
-  const hairProducts = await fetchData("http://localhost:3000/hairProducts");
+  //locally with json-server
+  // const newProducts = await fetchData("http://localhost:3000/newProducts");
+  // const bestOffersProducts = await fetchData(
+  //   "http://localhost:3000/bestOffersProducts"
+  // );
+  // const hairProducts = await fetchData("http://localhost:3000/hairProducts");
 
+
+
+  //for github page
+  const newProducts = await fetchData(
+    "https://my-json-server.typicode.com/AmiraliMotahari/serveroriflame2/newProducts"
+  );
+  const bestOffersProducts = await fetchData(
+    "https://my-json-server.typicode.com/AmiraliMotahari/serveroriflame2/bestOffersProducts"
+  );
+  const hairProducts = await fetchData(
+    "https://my-json-server.typicode.com/AmiraliMotahari/serveroriflame2/hairProducts"
+  );
   const allData = { newProducts, bestOffersProducts, hairProducts };
 
   return allData;
